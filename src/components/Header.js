@@ -47,7 +47,7 @@ const Header = () => {
           src="/images/icons8-source-code-50.png"
           alt="Profile"
         />
-        <h1 className="md:mt-7 mt-5 md:text-xl font-mono font-bold ml-4 s ">
+        <h1 className="md:mt-7 mt-5 md:text-xl font-mono font-bold ml-4 s  ">
           AKSHATH'S PORTFOLIO
         </h1>
       </div>
@@ -70,7 +70,7 @@ const Header = () => {
           </Link>
           <Link to="about" spy={true} smooth={true} duration={500}>
             <li
-              className={` m-4 ml-24 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
+              className={` m-4 ml-16 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
                 isAbout
                   ? "border-b-4"
                   : ""
@@ -103,7 +103,7 @@ const Header = () => {
           </li>
           </Link>
           <Link to="contact" spy={true} smooth={true} duration={500}>
-          <li className={`m-4 ml-24 hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
+          <li className={`m-4 ml-16 hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
               isContact
                 ? "border-b-4 "
                 : ""
