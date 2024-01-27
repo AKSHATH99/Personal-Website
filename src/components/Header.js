@@ -52,7 +52,7 @@ const Header = () => {
         </h1>
       </div>
       <div className=" hidden md:block " style={{ marginLeft: isScrolled ? "250px" : "0" }}>
-        <ul className="flex ml-28 justify-around border border-orange-500 text-orange-500  bg-gray-900 rounded-xl shadow-2xl">
+        <ul className="flex ml-28 mt-3 justify-around border border-orange-500 text-orange-500  bg-gray-900 rounded-xl shadow-2xl">
         <Link to="body" spy={true} smooth={true} duration={500}>
           <li
             className={`m-4 ml-1 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
