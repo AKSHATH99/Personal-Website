@@ -44,7 +44,6 @@ const Header = () => {
       <div className={`flex ${isScrolled ? "hidden" : "block"} `}>
         <img
           className="rounded-lg  h-12 w-12 mt-4"
-          //   src="/images/user-line.png"
           src="/images/icons8-source-code-50.png"
           alt="Profile"
         />
@@ -52,7 +51,7 @@ const Header = () => {
           AKSHATH'S PORTFOLIO
         </h1>
       </div>
-      <div className="md:p-4 hidden md:block " style={{ marginLeft: isScrolled ? "250px" : "0" }}>
+      <div className=" hidden md:block " style={{ marginLeft: isScrolled ? "250px" : "0" }}>
         <ul className="flex ml-28 justify-around border border-orange-500 text-orange-500  bg-gray-900 rounded-xl shadow-2xl">
         <Link to="body" spy={true} smooth={true} duration={500}>
           <li
