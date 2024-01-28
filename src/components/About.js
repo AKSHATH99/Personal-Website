@@ -82,12 +82,19 @@ const About = () => {
               src="/logo192.png"
               
             />
+                <img
+              className="h-14 m-4 md:h-24 "
+              alt="tailwind icon"
+              src="/images/tailwind.png"
+              
+            />
             <img
               className="h-16 m-4 md:h-24 "
               alt="Python icon"
               src="/images/python.png"
               
             />
+        
           </div>
           <h1 className="m-4 text-xl text-orange-800 font-bold">BACKEND</h1>
           <div className="flex flex-wrap">
