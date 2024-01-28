@@ -10,13 +10,13 @@ const Header = () => {
   const [isAbout, setisAbout] = useState(false);
   const [isProject, setisProject] = useState(false);
   const [isContact, setisContact] = useState(false);
-  const [isMenu , setIsMenu]=useState(false);
-  const dispatch =useDispatch();
+  const [isMenu, setIsMenu] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSidebar = () => {
     dispatch(hideSidebar());
   };
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -31,9 +31,9 @@ const Header = () => {
   }, []);
 
   // function toggleMenu(){
-    
+
   // }
-  console.log(isMenu)
+  console.log(isMenu);
   return (
     // <div className="border bg-black text-white flex shadow-lg ">
     <div
@@ -51,29 +51,30 @@ const Header = () => {
           AKSHATH'S PORTFOLIO
         </h1>
       </div>
-      <div className=" hidden md:block " style={{ marginLeft: isScrolled ? "250px" : "0" }}>
+      <div
+        className=" hidden md:block "
+        style={{ marginLeft: isScrolled ? "250px" : "0" }}
+      >
         <ul className="flex ml-28 mt-3 justify-around border border-orange-500 text-orange-500  bg-gray-900 rounded-xl shadow-2xl">
-        <Link to="body" spy={true} smooth={true} duration={500}>
-          <li
-            className={`m-4 ml-1 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
-              isHome ? "border-b-4" : ""
-            }`}
-            onClick={() => {
-              setisAbout(false);
-              setisContact(false);
-              setisProject(false);
-              setisHome(true);
-            }}
-          >
-            HOME
-          </li>
+          <Link to="body" spy={true} smooth={true} duration={500}>
+            <li
+              className={`m-4 ml-1 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
+                isHome ? "border-b-4" : ""
+              }`}
+              onClick={() => {
+                setisAbout(false);
+                setisContact(false);
+                setisProject(false);
+                setisHome(true);
+              }}
+            >
+              HOME
+            </li>
           </Link>
           <Link to="about" spy={true} smooth={true} duration={500}>
             <li
               className={` m-4 ml-16 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
-                isAbout
-                  ? "border-b-4"
-                  : ""
+                isAbout ? "border-b-4" : ""
               } `}
               onClick={() => {
                 setisAbout(true);
@@ -86,34 +87,35 @@ const Header = () => {
             </li>
           </Link>
           <Link to="project" spy={true} smooth={true} duration={500}>
-          <li
-            className={` m-4 ml-24 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300   ${
-              isProject
-                ? "border-b-4"
-                : ""
-            } `}
-            onClick={() => {
-              setisAbout(false);
-              setisContact(false);
-              setisProject(true);
-              setisHome(false);
-            }}
-          >
-            PROJECTS
-          </li>
+            <li
+              className={` m-4 ml-24 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300   ${
+                isProject ? "border-b-4" : ""
+              } `}
+              onClick={() => {
+                setisAbout(false);
+                setisContact(false);
+                setisProject(true);
+                setisHome(false);
+              }}
+            >
+              PROJECTS
+            </li>
           </Link>
           <Link to="contact" spy={true} smooth={true} duration={500}>
-          <li className={`m-4 ml-16 hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
-              isContact
-                ? "border-b-4 "
-                : ""
-            } `}
-            onClick={() => {
-              setisAbout(false);
-              setisContact(true);
-              setisProject(false);
-              setisHome(false);
-            }}>REACH ME</li></Link>
+            <li
+              className={`m-4 ml-16 hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
+                isContact ? "border-b-4 " : ""
+              } `}
+              onClick={() => {
+                setisAbout(false);
+                setisContact(true);
+                setisProject(false);
+                setisHome(false);
+              }}
+            >
+              REACH ME
+            </li>
+          </Link>
         </ul>
       </div>
       <button
@@ -123,10 +125,15 @@ const Header = () => {
         hover:bg-orange-500x hover:text-white transition duration-300 ease-in-out  `}
       >
         <img src="/images/download-line.png" />
-        Resume  
-      </button> 
-      <div onClick={() => handleSidebar()} className="bg-white h-7 w-7 mt-7 flex items-center justify-center mx-10 md:hidden">
-        <img src="/images/menu-line.png"/>
+        Resume
+      </button>
+      <div
+        onClick={() => handleSidebar()}
+        className={`bg-white h-7 w-7 mt-7 flex items-center justify-center mx-10 md:hidden  ${
+          isScrolled ? "hidden" : "block"
+        }`}
+      >
+        <img src="/images/menu-line.png" />
       </div>
     </div>
   );
