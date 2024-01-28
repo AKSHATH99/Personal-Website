@@ -117,7 +117,7 @@ const About = () => {
             <img
               className="h-16 m-4 md:h-24 "
               alt="GitHub icon"
-              src="/images/Git-icon.png"
+              src="/images/Git-Icon.png"
             />
           </div>
         </div>
