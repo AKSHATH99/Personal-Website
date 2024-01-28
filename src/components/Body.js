@@ -31,17 +31,17 @@ const Body = () => {
       </div>
 
       <div className=" md:mb-0  text-black flex flex-col justify-center items-center">
-        <div className="md:flex md:justify-center md:items-center mt-44">
+        <div className="md:flex md:justify-center md:items-center xl:mt-44 320:mt-10 ">
           <div className="md:mr-10">
             <img
               alt="gif"
-              className="w-72 h-44 md:w-80 md:h-80 m-5   md:m-0 mx-auto"
+              className="w-72 h-44 md:w-80 md:h-80 m-5  320:h-44 320:w-44  md:m-0 mx-auto"
               src="/images/coding boy.png"
             />
           </div>
 
           <div className="m-2 md:w-2/3 text-center md:text-left">
-            <p className="text-3xl md:text-6xl font-bold font-mono">
+            <p className="text-3xl md:text-6xl font-bold font-mono 320:text-2xl ">
               Hi, I am <span className="text-orange-600">Akshath P</span>
             </p>
             <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">

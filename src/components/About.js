@@ -4,15 +4,16 @@ const About = () => {
   return (
     <div
       id="about"
-      className="  h-full  p-8 bg-gradient-to-r from-rose-100 to-teal-100
+      className="  h-full  p-8 bg-gradient-to-r from-rose-100 to-teal-100 scroll-p-44
     "
+    style={{ scrollPadding: "200px" }}
     >
       {/* <h1 className="text-4xl md:text-5xl md:ml-72 font-mono font-bold text-black  border-b-orange-600">ABOUT ME</h1> */}
-      <h1 className="text-4xl md:text-5xl md:ml-72 font-mono font-bold    w-max text-orange-600 ">
+      <h1 className="text-4xl md:text-5xl md:ml-72 font-mono font-bold    w-max text-orange-600  ">
         Who am I... ?
       </h1>
 
-      <div className="flex">
+      <div className="flex 4xl:block ">
         <div className="w-full">
           <p className="text-base md:text-xl text-black  m-4  mt-14 text-justify">
             Hello there! I'm{" "}
@@ -27,28 +28,28 @@ const About = () => {
             <br />
           </p>
 
-          <p className="font-bold text-3xl mt-20 ml-5">
+          <p className="font-bold text-3xl mt-20 ml-5 4xl:ml-3">
             {" "}
             What <span className=" text-orange-600">Drives</span> Me 🚀{" "}
           </p>
-          <p className=" text-black md:text-xl text-justify ml-6">
+          <p className=" text-black md:text-xl text-justify ml-6 800:w-full">
             {" "}
             I'm a aspiring Frontend Developer who turns ideas into awesome
             websites. 💻✨ I specialize in creating user-friendly designs that
             make a lasting impression. 🎨 Let's build something amazing together
             and bring your vision to the digital world! 🌐{" "}
           </p>
-          <p className="mt-20 md:text-xl text-justify ml-5">
+          <p className="mt-20 md:text-xl text-justify ml-5 800:w-full">
             As someone entirely new to this field, I am eager to gain valuable
             experience and am actively seeking opportunities for collaboration.
           </p>
         </div>
 
-        <div className="w-full h-full mr-32 hidden md:block ">
+        <div className="w-full h-full xl:mr-32 hidden md:block 800:mr-3  ">
           <img
             src="/images/image 2.png"
             alt="Profile"
-            className="w-full h-full "
+            className="w-full h-full 4xl:hidden "
           />
         </div>
       </div>

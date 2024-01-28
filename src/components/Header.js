@@ -37,25 +37,26 @@ const Header = () => {
   return (
     // <div className="border bg-black text-white flex shadow-lg ">
     <div
-      className={`w-full ${
+      className={`w-full  ${
         isScrolled ? "bg-transparent" : "h-20"
       } bg-gray-500 flex text-white transition-all duration-300 fixed top-0 `}
     >
-      <div className={`flex ${isScrolled ? "hidden" : "block"} `}>
+      <div className={ `flex 320:pl-2 pl-4 ${isScrolled ? "hidden" : "block"} `}>
         <img
-          className="rounded-lg  h-12 w-12 mt-4"
+          className="rounded-lg  h-12 w-12 mt-4 "
           src="/images/icons8-source-code-50.png"
-          alt="Profile"
+              alt="Profile"
         />
         <h1 className="md:mt-7 mt-5 md:text-xl font-mono font-bold ml-4 s  ">
           AKSHATH'S PORTFOLIO
         </h1>
       </div>
+
       <div
-        className=" hidden md:block "
-        style={{ marginLeft: isScrolled ? "250px" : "0" }}
+        className=" block md:block 800:hidden xl:block   "
+        style={{ marginLeft: isScrolled ? "290px" : "0" }}
       >
-        <ul className="flex ml-28 mt-3 justify-around border border-orange-500 text-orange-500  bg-gray-900 rounded-xl shadow-2xl">
+        <ul className="xl:flex 320:hidden  ml-28 mt-3 justify-around border border-yellow-100 text-yellow-100  bg-gray-900 rounded-xl shadow-2xl">
           <Link to="body" spy={true} smooth={true} duration={500}>
             <li
               className={`m-4 ml-1 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
@@ -121,15 +122,15 @@ const Header = () => {
       <button
         className={`flex ${
           isScrolled ? "hidden" : "block"
-        }    block md:ml-28 mt-5 w-36 h-12 border border-black   text-black  bg-orange-400 rounded-xl shadow-2xl justify-center items-center
-        hover:bg-orange-500x hover:text-white transition duration-300 ease-in-out  `}
+        }    block md:ml-28 mt-5 w-36 h-12 border border-black   text-white  bg-black rounded-xl shadow-2xl justify-center items-center
+        hover:bg-orange-500x hover:text-blue-400 transition duration-300 ease-in-out  `}
       >
-        <img src="/images/download-line.png" />
-        Resume
+        {/* <img src="/images/download-line.png" /> */}
+        My Resume
       </button>
       <div
         onClick={() => handleSidebar()}
-        className={`bg-white h-7 w-7 mt-7 flex items-center justify-center mx-10 md:hidden  ${
+        className={`bg-white h-7 w-7 mt-7 flex xl:hidden items-center justify-center mx-10 md:hidden 800:block 320:ml-2 320:mr-0 ${
           isScrolled ? "hidden" : "block"
         }`}
       >

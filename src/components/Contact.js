@@ -4,15 +4,15 @@ const Contact = () => {
    
   return (
     <div id='contact' className=''>
-      <div className='text-3xl font-bold border-b-8 w-max border-orange-600 md:ml-56 ml-20 shadow-xl' >
+      <div className='text-3xl mt-10 font-bold border-b-8 w-max border-orange-600 md:ml-56 ml-20 shadow-xl' >
       CONTACT ME
       </div>
       <p className=' md:ml-44 m-10 text-xl'>I  am looking forward to collaborate and gain experiance . Feel free to drop me a DM or mail me </p>
       <div className=' mt-3 flex'>
-      <div class='border border-black md:w-max p-5 md:ml-40 m-6 rounded-lg shadow-xl'>
+      <div class='border border-black w-max p-5 md:ml-40 m-6 rounded-lg shadow-xl'>
     <div class='flex items-center mt-3'>
         <img class='w-12 h-12' src='/images/mail.png' />
-        <a href="mailto:akshathpkk@gmail.com"> <p class='ml-4 text-lg font-semibold'>akshathpkk@gmail.com</p></a>
+        <a href="mailto:akshathpkk@gmail.com"> <p class='md:ml-4  sm:md-3 md:text-lg md:p-4 800:ml-0  font-semibold '>akshathpkk@gmail.com</p></a>
     </div>
     <div class='flex items-center mt-3'>
         <img class='w-12 h-12' src='/images/phone.png' />
@@ -35,7 +35,7 @@ const Contact = () => {
 
 </div>
 
-      <div className='md:block hidden'>
+      <div className='md:block hidden 800:hidden xl:block'>
         <img src='/images/contact image.png'/>
        
       </div>
