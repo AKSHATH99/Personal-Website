@@ -3,6 +3,15 @@ import ProjectBox from "./ProjectBox";
 
 const ProjectData = [
   {
+    title: "GUIDO ",
+    Livelink: "https://guido-frontend.vercel.app/",
+    Githublink: "https://github.com/AKSHATH99/GUIDO",
+    about:
+      "GUIDO is a full stack MERN app build to help students find their right mentor based on their career and prefered field. Made using of TailwindCSS and Framer Motion for designing and nodemailer for mailing system ",
+    placeholderImage: "/images/guido.png",
+    stack: ["/logo192.png", ,"/images/mongodb.png","/images/express.png","/images/nodejs.png","/images/tailwind.png","/images/framer.png"],
+  },
+  {
     title: "FOOD-ZONE",
     Livelink: "https://food-zone-o762.vercel.app/",
     Githublink: "https://github.com/AKSHATH99/FOOD-ZONE",
@@ -19,7 +28,7 @@ const ProjectData = [
     about:
       "The project is aimed at creating frontend of a restaurent website.It includes features of online delivery system i.e. a foomenu and cart sections using React.js for a dynamic user interface and Tailwind CSS for a clean and visually appealing design",
     placeholderImage: "/images/Weather.png",
-    stack: ["/logo192.png", "/images/tailwind.png"],
+    stack: ["/logo192.png", "/images/tailwind.png",],
   },
 ];
 

@@ -4,7 +4,9 @@ const ProjectBox = ({ data }) => {
   const [hoverEvent , setHoverEvent] = useState(false)
   console.log(data.LiveLink);
   return (
-    <div className=" rounded-xl   m-4   ">
+    <div onMouseEnter={() => setHoverEvent(true)}
+    onMouseLeave={() => setHoverEvent(false)} 
+    className=" rounded-xl  hover:cursor-pointer  m-4   ">
       <div className="p-2">
         <img className=" w-[500px] h-[350px] rounded-xl " src={data.placeholderImage} />
 
@@ -51,39 +53,6 @@ const ProjectBox = ({ data }) => {
             
         </div>
       </div>
-      {/* <div>
-            <h1 className="m-4 text-2xl font-bold text-orange-600">
-            {data.title}
-            </h1>
-            <p className="m-2 p-2">
-            {data.about}{" "}
-            </p>
-
-            <div className="flex">
-            {data.stack.map((stack)=>
-                // {console.log(stack)}
-                <img
-                alt="html icon"
-                  className="h-7 w-7 ml-5"
-                  src={stack}
-                />
-            )}
-            </div>
-
-            <div className="flex mt-4">
-              <button className="  h-10 w-10 mt-5 rounded-lg m-3 ">
-               <a href={data.Livelink} target="blank"><img
-                alt="live link"
-                  className="w-full h-full"
-                  src="https://cdn-icons-png.flaticon.com/512/8839/8839121.png"
-                /></a> 
-              </button>
-
-              <button className="bg-black  h-10 w-10 rounded-lg m-3 mt-5">
-              <a href={data.Githublink} target="blank"> <img alt="git hub repo link" className="w-full h-full" src="/images/git-orange.png" /></a> 
-              </button>
-            </div>
-          </div> */}
     </div>
   );
 };

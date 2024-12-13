@@ -128,12 +128,12 @@ const Header = () => {
         onClick={()=>{redirectToDrive()}}
         className={`flex ${
           isScrolled ? "hidden" : "block"
-        }    block md:ml-28 mt-5 w-36 h-12 border border-black   text-white  bg-black rounded-xl shadow-2xl justify-center items-center
+        }    block md:ml-28 mt-5 w-36 h-12 border border-orange-500   text-white  bg-orange-400 rounded-xl shadow-2xl shadow-black       justify-center items-center
         hover:bg-orange-500x hover:text-blue-400 transition duration-300 ease-in-out  `}
       >
         {/* <img src="/images/download-line.png" /> */}
         <a src="">
-        My Resume
+        Hire Me 
       </a>
       </button>
       <div
