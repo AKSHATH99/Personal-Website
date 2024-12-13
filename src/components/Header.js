@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { hideSidebar } from "../utils/MenuSlice";
@@ -15,6 +16,10 @@ const Header = () => {
 
   const handleSidebar = () => {
     dispatch(hideSidebar());
+  };
+
+  const redirectToDrive = () => {
+    window.open("https://drive.google.com/file/d/1xfI_VGZtmryAlpa2b4QmrXfkE2XZFW_K/view?usp=sharing", "_blank");
   };
 
   useEffect(() => {
@@ -120,13 +125,16 @@ const Header = () => {
         </ul>
       </div>
       <button
+        onClick={()=>{redirectToDrive()}}
         className={`flex ${
           isScrolled ? "hidden" : "block"
         }    block md:ml-28 mt-5 w-36 h-12 border border-black   text-white  bg-black rounded-xl shadow-2xl justify-center items-center
         hover:bg-orange-500x hover:text-blue-400 transition duration-300 ease-in-out  `}
       >
         {/* <img src="/images/download-line.png" /> */}
+        <a src="">
         My Resume
+      </a>
       </button>
       <div
         onClick={() => handleSidebar()}
