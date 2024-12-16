@@ -58,7 +58,7 @@ const Header = () => {
       </div>
 
       <div
-        className=" block md:block 800:hidden xl:block   "
+        className=" block md:block 800:hidden xl:block z-50  "
         style={{ marginLeft: isScrolled ? "290px" : "0" }}
       >
         <ul className="xl:flex 320:hidden  ml-28 mt-3 justify-around border border-yellow-100 text-yellow-100  bg-gray-900 rounded-xl shadow-2xl">
@@ -128,8 +128,8 @@ const Header = () => {
         onClick={()=>{redirectToDrive()}}
         className={`flex ${
           isScrolled ? "hidden" : "block"
-        }    block md:ml-28 mt-5 w-36 h-12 border border-orange-500   text-white  bg-orange-400 rounded-xl shadow-2xl shadow-black       justify-center items-center
-        hover:bg-orange-500x hover:text-blue-400 transition duration-300 ease-in-out  `}
+        }    block md:ml-28 mt-5 w-36 h-12 border border-yellow-100   text-yellow-100  bg-black rounded-xl shadow-2xl shadow-black       justify-center items-center
+        hover:bg-gray-600  transition duration-300 ease-in-out  `}
       >
         {/* <img src="/images/download-line.png" /> */}
         <a src="">

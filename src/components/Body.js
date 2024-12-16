@@ -45,13 +45,11 @@ const Body = () => {
               Hi, I am <span className="text-orange-600">Akshath P</span>
             </p>
             <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">
-              Front-end Developer.
+              Full-Stack Developer.
             </p>
             <p className="w-full md:w-96 my-3 md:text-lg italic">
-              "Enthusiastic and motivated self-learning in Information
-              Technology. Interested in exploring about Web Development and
-              aspects of creating responsive and user-friendly websites. Now I
-              am looking for more experience in my field."
+              I build full stack web apps on MERN stack  focusing on a eye for responsive design and efficient functionality . 
+              <br/><p className="font-bold">Looking out  for full time roles , internships or freelance projects and collaboration."</p>
             </p>
             <div className="flex justify-center md:justify-start">
               <a
