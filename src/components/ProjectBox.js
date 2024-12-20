@@ -1,59 +1,79 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ProjectBox = ({ data }) => {
-  const [hoverEvent , setHoverEvent] = useState(false)
-  console.log(data.LiveLink);
+  const [hoverEvent, setHoverEvent] = useState(false);
+
   return (
-    <div onMouseEnter={() => setHoverEvent(true)}
-    onMouseLeave={() => setHoverEvent(false)} 
-    className=" rounded-xl  hover:cursor-pointer  m-4   ">
-      <div className="p-2">
-        <img className=" w-[500px] h-[350px] rounded-xl " src={data.placeholderImage} />
+    <motion.div
+      onMouseEnter={() => setHoverEvent(true)}
+      onMouseLeave={() => setHoverEvent(false)}
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
+      }}
+      className="rounded-xl hover:cursor-pointer mb-28 m-4 w-[400px] h-[300px] relative overflow-hidden "
+    >
+      <img
+        className="w-full h-full rounded-xl object-cover"
+        src={data.placeholderImage}
+        alt={`${data.title} placeholder`}
+      />
 
-
-        <div
-          onMouseEnter={() => setHoverEvent(true)}
-          onMouseLeave={() => setHoverEvent(false)}
-          className={`-mt-[277px] rounded-xl pb-10 pt-5 transition-all duration-300 ${
-            hoverEvent
-              ? "bg-white/50 backdrop-blur-md relative opacity-100 text-black"
-              : "opacity-0 absolute"
-          }`}
-        >
-          <div className="flex ">
-          <h1 className="  text-4xl ml-10 mb-2 font-bold ">{data.title}</h1>
-          <div className="flex mx-5 ">
-              <button className="  h-10 w-10 mt-1 rounded-lg ">
-               <a href={data.Livelink} target="blank"><img
-                alt="live link"
-                  className="w-10 h-10"
-                  src="https://cdn-icons-png.flaticon.com/512/8839/8839121.png"
-                /></a> 
-              </button>
-
-              <button className="  h-10 w-10 rounded-lg mt-1 ml-5 ">
-              <a href={data.Githublink} target="blank"> <img alt="git hub repo link" className="w-8 h-8" src="/images/git-orange.png" /></a> 
-              </button>
-
-            </div>
-            </div>
-          <p className=' text-sm w-[400px] p-5'>{data.about}</p>
-
-          <div className="flex">
-            {data.stack.map((stack)=>
-                // {console.log(stack)}
-                <img
-                alt="html icon"
-                  className="h-7 w-7 ml-5"
-                  src={stack}
-                />
-            )}
-            </div>
-
-            
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={hoverEvent ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className={`absolute top-0 left-0 w-full h-full bg-white/50 backdrop-blur-md rounded-xl flex flex-col justify-between p-5`}
+      >
+        {/* Data */}
+        <div>
+          <h1 className="text-2xl font-bold text-orange-700">{data.title}</h1>
+          <div className="flex mt-4">
+            <a
+              href={data.Livelink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-3"
+            >
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                src="https://cdn-icons-png.flaticon.com/512/8839/8839121.png"
+                alt="Live link"
+                className="h-10 w-10"
+              />
+            </a>
+            <a
+              href={data.Githublink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                src="/images/github.png"
+                alt="GitHub link"
+                className="h-8 w-8"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <p className="text-sm text-black mt-4  font-ubuntu">{data.about}</p>
+
+        <div className="flex mt-4">
+          {data.stack.map((stack, index) => (
+            <motion.img
+              key={index}
+              src={stack}
+              alt="Tech stack"
+              className="h-7 w-7 ml-2"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+            />
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

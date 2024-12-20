@@ -1,6 +1,23 @@
-import React from "react";
+import React , {useState} from "react";
+import sendMail from '../utils/MailHandler.js'
 
 const Contact = () => {
+
+  const [name  , setName]= useState();
+  const [email  , setEmail]= useState();
+  const [sub  , setSub]= useState();
+  const [msg  , setMsg]= useState();
+
+   const  MailFunction=async()=>{
+    try {
+      console.log("SEnding")
+      const mailing = await sendMail("guyanonymous250@gmail.com","Testing", "testing");
+      console.log("mailing success")
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div id="contact" className="">
       <div className="text-3xl mt-10 font-bold  w-max  md:ml-44 ml-20 ">
@@ -43,6 +60,7 @@ const Contact = () => {
             placeholder="Biref your project idea or service over here "
           />
           <button
+            onClick={MailFunction}
             type="submit"
             className="text-white bg-orange-600 p-3 w-full rounded-lg hover:bg-orange-500"
           >

@@ -47,7 +47,7 @@ const Body = () => {
             <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">
               Full-Stack Developer.
             </p>
-            <p className="w-full md:w-96 my-3 md:text-lg italic">
+            <p className="w-full md:w-96 my-3 md:text-lg   font-ubuntu">
               I build full stack web apps on MERN stack  focusing on a eye for responsive design and efficient functionality . 
               <br/><p className="font-bold">Looking out  for full time roles , internships or freelance projects and collaboration."</p>
             </p>

@@ -30,6 +30,10 @@ module.exports = {
         roboto: ['Roboto', 'sans-serif'],
         edu: ['"Edu AU VIC WA NT Pre"', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        ubuntu:['Ubuntu','sens-serif'],
+        playfair: ['"Playfair Display"', "serif"],
+        playwrite: ['"Playwrite VN Guides"', "sans-serif"],
+        
 
       },
     },

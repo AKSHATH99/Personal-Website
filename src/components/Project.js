@@ -34,13 +34,13 @@ const ProjectData = [
 
 const Project = () => {
   return (
-    <div id="project" className=" bg-gradient-to-r from-gray-100 to-gray-300   text-white">
+    <div id="project" className="    text-white bg-gradient-to-r from-gray-700 via-gray-900 to-black">
       <div>
-      <h1 className="md:text-4xl text-3xl font-bold text-orange-800 mt-0 pt-7 m-6 md:ml-72 800:ml-44">
-      Take a look at my projects.....{" "}
+      <h1 className=" text-transparent font-poppins font-playfair bg-clip-text bg-gradient-to-r from-white to-orange-500 md:text-5xl text-3xl font-bold  mt-0 pt-7 m-6 md:ml-72 800:ml-44   ">
+      Things I've Built .{" "}
       </h1>
       </div>
-      <div className="flex flex-wrap mt-20">
+      <div className="flex flex-wrap mt-20 ml-32 ">
         {/* <div className=" border-2 border-white md:w-2/3 md:h-max h-max  800:w-3/4  shadow-xl   m-4  md:text-justify md:flex bg-black ">
           <img
             className="md:h-auto h-auto xl:w-1/2   md:w-3/5 "

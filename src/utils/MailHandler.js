@@ -2,12 +2,12 @@ import { Resend } from 'resend';
 
 const resend = new Resend('re_icSbDhMo_781bvptYUDw5e1wd3bkVst44');
 
-(async function () {
+async function sendMail (from , sub , msg) {
   const { data, error } = await resend.emails.send({
-    from: '',
+    from: from,
     to: 'akshathpkk@gmail.com',
-    subject: 'Hello World',
-    html: '<strong>It works!</strong>',
+    subject: sub,
+    html: msg,
   });
 
   if (error) {
@@ -15,4 +15,6 @@ const resend = new Resend('re_icSbDhMo_781bvptYUDw5e1wd3bkVst44');
   }
 
   console.log({ data });
-})();
+};
+
+export default sendMail;

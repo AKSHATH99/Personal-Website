@@ -28,13 +28,13 @@ const About = () => {
       id="about"
       // className="  h-full  p-8 bg-gradient-to-r from-rose-100 to-teal-100 scroll-p-44
       // className="  h-full  p-8 bg-gradient-to-r from-gray-300 via-gray-300 to-black
-      className="  h-full  p-8 bg-gray-900
+      className="  h-full pl-0 p-8 bg-gray-900
     "
       style={{ scrollPadding: "200px" }}
     >
       {/* <h1 className="text-4xl md:text-5xl md:ml-72 font-mono font-bold text-black  border-b-orange-600">ABOUT ME</h1> */}
-      <h1 className="text-4xl md:text-5xl md:ml-56 font-mono font-bold mt-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500 w-max">
-  LANGUAGES AND FRAMEWORKS I WORK ON
+      <h1 className="text-4xl font-playfair md:text-5xl md:ml-44 font-mono font-bold mt-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500 w-max">
+  Languages and Frameworks I Work On
 </h1>
 
 
