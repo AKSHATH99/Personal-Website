@@ -29,14 +29,14 @@ const Contact = () => {
         Need help building your{" "}
         <span className="font-bold text-orange-600">product</span> ?
       </p>
-      <p className="ml-44 text-gray-400">
+      <p className=" ml-10 md:ml-44 text-gray-400">
         Feel free to hit me up in mail filling this form
       </p>
 
       <div className=" mt-3 flex">
        
-
-        <div class="border  w-[500px] p-5 md:ml-44 m-6 rounded-lg shadow-xl">
+        <div>
+        <div class="border  md:w-[500px] p-5 md:ml-44 m-6  rounded-lg shadow-xl">
           {/* <p className='text-xl font-roboto text-orange-600 ml-32 font-bold '>Drop A Mail </p> */}
           <input
             className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
@@ -68,7 +68,43 @@ const Contact = () => {
             {" "}
             Send message{" "}
           </button>
+
+          
         </div>
+        <p className=" md:hidden  ml-20 font-poppins text-gray-500">Find me in my socials and profiles : </p>
+        <div class="  md:hidden flex mt-3 ml-28">
+            <motion.a
+                href="https://www.linkedin.com/in/akshath-p-519939287/"
+                target="blank"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+              >
+                {" "}
+                <img
+                  alt="linkedin-icon"
+                  className="m-4 mx-2 h-12 w-12"
+                  src="/images/linkedin-orange.png"
+                />
+              </motion.a>
+              <motion.a href="https://github.com/AKSHATH99" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <img
+                  alt="git-icon"
+                  className="m-4 mx-1 h-10 w-10 mt-5"
+                  src="/images/git-orange.png"
+                />
+              </motion.a>
+              <motion.a href="https://twitter.com/AkshathP2" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <img
+                  alt="icon"
+                  className="m-4 mx-2 h-8 w-8 mt-6 "
+                  src="/images/x-orange.png"
+                />
+              </motion.a>
+            </div>
+        </div>
+        
 
         <div className="md:block hidden 800:hidden xl:block">
           <img src="/images/contact image.png" />

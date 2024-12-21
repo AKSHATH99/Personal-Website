@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+const openLiveLink = (link) => {
+  window.open(link);
+};
+
 const ProjectBox = ({ data }) => {
   const [hoverEvent, setHoverEvent] = useState(false);
 
@@ -12,8 +16,9 @@ const ProjectBox = ({ data }) => {
         scale: 1.05,
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
       }}
-      className="rounded-xl hover:cursor-pointer mb-28 m-4 w-[400px] h-[300px] relative overflow-hidden "
-    >
+      className="rounded-xl hover:cursor-pointer p-3 mb-28 m-4 w-[400px] h-[300px] relative overflow-hidden "
+      onClick={()=>{openLiveLink(data.Livelink)}}
+    > 
       <img
         className="w-full h-full rounded-xl object-cover"
         src={data.placeholderImage}
