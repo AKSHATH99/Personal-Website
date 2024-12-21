@@ -1,5 +1,6 @@
 import React , {useState} from "react";
 import sendMail from '../utils/MailHandler.js'
+import { motion } from "framer-motion";
 
 const Contact = () => {
 
@@ -74,22 +75,35 @@ const Contact = () => {
           <p className="ml-32 font-poppins">Find me in my socials and profiles : </p>
           <div className="flex ml-32">
             <div class="flex items-center mt-3">
-              <a
+            <motion.a
                 href="https://www.linkedin.com/in/akshath-p-519939287/"
-                target="_blank"
+                target="blank"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
               >
-                <img class="w-12 h-12" src="/images/linkedin-orange.png" />
-              </a>
-            </div>
-            <div class="flex items-center mt-3 ml-5">
-              <a href="https://twitter.com/AkshathP2" target="_blank">
-                <img class="w-8 h-8 ml-2" src="/images/x-orange.png" />
-              </a>
-            </div>
-            <div class="flex items-center mt-3 ml-5">
-              <a href="https://github.com/AKSHATH99" target="_blank">
-                <img class="w-10 h-10" src="/images/git-orange.png" />
-              </a>
+                {" "}
+                <img
+                  alt="linkedin-icon"
+                  className="m-4 mx-2 h-12 w-12"
+                  src="/images/linkedin-orange.png"
+                />
+              </motion.a>
+              <motion.a href="https://github.com/AKSHATH99" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <img
+                  alt="git-icon"
+                  className="m-4 mx-1 h-10 w-10 mt-5"
+                  src="/images/git-orange.png"
+                />
+              </motion.a>
+              <motion.a href="https://twitter.com/AkshathP2" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
+                <img
+                  alt="icon"
+                  className="m-4 mx-2 h-8 w-8 mt-6 "
+                  src="/images/x-orange.png"
+                />
+              </motion.a>
             </div>
           </div>
         </div>

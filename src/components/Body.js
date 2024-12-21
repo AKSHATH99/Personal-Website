@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import HeaderResponsive from "./HeaderResponsive";
 import { useSelector } from "react-redux";
@@ -40,45 +41,61 @@ const Body = () => {
             />
           </div>
 
-          <div className="m-2 md:w-2/3 text-center md:text-left">
-            <p className="text-3xl md:text-6xl font-bold font-mono 320:text-2xl ">
-              Hi, I am <span className="text-orange-600">Akshath P</span>
+          <motion.div className="m-2 md:w-2/3 text-center md:text-left">
+            <p className="text-3xl md:text-6xl font-bold font-mono 320:text-2xl">
+              Hi, I am{" "}
+              <motion.span
+                whileHover={{ scale: 0.9 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="text-orange-600 inline-block hover:cursor-pointer"
+              >
+                Akshath P
+              </motion.span>
             </p>
             <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">
               Full-Stack Developer.
             </p>
             <p className="w-full md:w-96 my-3 md:text-lg   font-ubuntu">
-              I build full stack web apps on MERN stack  focusing on a eye for responsive design and efficient functionality . 
-              <br/><p className="font-bold">Looking out  for full time roles , internships or freelance projects and collaboration."</p>
+              I build full stack web apps on MERN stack focusing on a eye for
+              responsive design and efficient functionality .
+              <br />
+              <p className="font-bold">
+                Looking out for full time roles , internships or freelance
+                projects and collaboration."
+              </p>
             </p>
             <div className="flex justify-center md:justify-start">
-              <a
+              <motion.a
                 href="https://www.linkedin.com/in/akshath-p-519939287/"
                 target="blank"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
               >
                 {" "}
                 <img
                   alt="linkedin-icon"
-                  className="m-4 h-12 w-12"
+                  className="m-4 mx-2 h-12 w-12"
                   src="/images/linkedin-orange.png"
                 />
-              </a>
-              <a href="https://github.com/AKSHATH99" target="blank">
+              </motion.a>
+              <motion.a href="https://github.com/AKSHATH99" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
                 <img
                   alt="git-icon"
-                  className="m-4 h-10 w-10 mt-5"
+                  className="m-4 mx-1 h-10 w-10 mt-5"
                   src="/images/git-orange.png"
                 />
-              </a>
-              <a href="https://twitter.com/AkshathP2" target="blank">
+              </motion.a>
+              <motion.a href="https://twitter.com/AkshathP2" target="blank" whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}>
                 <img
                   alt="icon"
-                  className="m-4 h-8 w-8 mt-6 "
+                  className="m-4 mx-2 h-8 w-8 mt-6 "
                   src="/images/x-orange.png"
                 />
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

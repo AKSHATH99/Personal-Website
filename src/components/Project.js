@@ -36,7 +36,7 @@ const Project = () => {
   return (
     <div id="project" className="    text-white bg-gradient-to-r from-gray-700 via-gray-900 to-black">
       <div>
-      <h1 className=" text-transparent font-poppins font-playfair bg-clip-text bg-gradient-to-r from-white to-orange-500 md:text-5xl text-3xl font-bold  mt-0 pt-7 m-6 md:ml-72 800:ml-44   ">
+      <h1 className=" text-transparent  font-playfair bg-clip-text bg-gradient-to-r from-white to-orange-500 md:text-5xl text-3xl font-bold  mt-0 pt-7 m-6 md:ml-72 800:ml-44   ">
       Things I've Built .{" "}
       </h1>
       </div>
