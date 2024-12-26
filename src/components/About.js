@@ -29,7 +29,7 @@ const About = () => {
       className: "h-16 m-4 md:h-16",
     },
     {
-      src: "/images/framer.png",
+      src: "/images/motion.png",
       alt: "Framer icon",
       className: "h-16 m-4 md:h-16",
     },
@@ -193,7 +193,7 @@ const About = () => {
     "
       style={{ scrollPadding: "200px" }}
     >
-      <h1 className="text-xl ml-10 font-playfair md:text-5xl md:ml-44 font-mono font-bold mt-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500 w-max">
+      <h1 className="text-xl ml-10  md:text-5xl md:ml-44 font-mono font-bold mt-10 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-500 w-max">
         Languages and Frameworks I Work On
       </h1>
 
