@@ -9,7 +9,7 @@ const ProjectData = [
     about:
       "GUIDO is a full stack MERN app build to help students find their right mentor based on their career and prefered field. Made using of TailwindCSS and Framer Motion for designing and nodemailer for mailing system ",
     placeholderImage:"/images/myImage.png",
-    stack: ["/logo192.png", ,"/images/mongodb.png","/images/express.png","/images/nodejs.png","/images/tailwind.png","/images/framer.png"],
+    stack: ["/logo192.png", ,"/images/database.png","/images/expressjs.png","/images/node.png","/images/tailwind.png","/images/motion.png"],
   },
   {
     title: "FOOD-ZONE",
