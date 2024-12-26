@@ -8,7 +8,7 @@ const ProjectData = [
     Githublink: "https://github.com/AKSHATH99/GUIDO",
     about:
       "GUIDO is a full stack MERN app build to help students find their right mentor based on their career and prefered field. Made using of TailwindCSS and Framer Motion for designing and nodemailer for mailing system ",
-    placeholderImage: "https://asset.cloudinary.com/ddvcsca2t/1005cf6aa76131c7567f16e79abc6c61",
+    placeholderImage:"/images/myImage.png",
     stack: ["/logo192.png", ,"/images/mongodb.png","/images/express.png","/images/nodejs.png","/images/tailwind.png","/images/framer.png"],
   },
   {
