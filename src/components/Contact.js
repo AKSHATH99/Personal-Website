@@ -2,6 +2,8 @@ import React , {useState} from "react";
 import sendMail from '../utils/MailHandler.js'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import { use } from "react";
+import LoaderAnimation from "./LoaderAnimation.js"
 
 const Contact = () => {
 
@@ -9,10 +11,12 @@ const Contact = () => {
   const [email  , setEmail]= useState();
   const [sub  , setSub]= useState();
   const [msg  , setMsg]= useState();
+  const [mailStatus , setMailStatus] = useState(false);
+  const [loader , setLoader] = useState(false);
 
   const sendEmail = () => {
     // e.preventDefault();
-
+      setLoader(true);
       // Hardcoded values for testing
       const dataToBeSend = {
         from_name: name,
@@ -30,7 +34,12 @@ const Contact = () => {
       .then(
         (result) => {
           console.log('Success:', result.text);
-          alert('Test email sent successfully!');
+          setMailStatus(true)
+          setLoader(false)
+          setMsg("");
+          setName("");
+          setEmail("")
+          setSub("")
         },
         (error) => {
           console.log('Error:', error.text);
@@ -85,14 +94,16 @@ const Contact = () => {
             placeholder="Biref your project idea or service over here "
             onChange={(e)=>setMsg(e.target.value)}
           />
-          <button
+          {mailStatus? <p className="font-poppins font-bold text-green-300">DM sent . Will be reaching out shortly :)</p>:<button
             onClick={sendEmail}
             type="submit"
             className="text-white bg-orange-600 p-3 w-full rounded-lg hover:bg-orange-500"
           >
             {" "}
-            Send message{" "}
-          </button>
+            
+           {loader?<LoaderAnimation/>:"Send message"} 
+          </button>}
+          
 
           
         </div>
