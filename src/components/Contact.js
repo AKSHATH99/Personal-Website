@@ -1,6 +1,7 @@
 import React , {useState} from "react";
 import sendMail from '../utils/MailHandler.js'
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
@@ -9,15 +10,35 @@ const Contact = () => {
   const [sub  , setSub]= useState();
   const [msg  , setMsg]= useState();
 
-   const  MailFunction=async()=>{
-    try {
-      console.log("SEnding")
-      const mailing = await sendMail("guyanonymous250@gmail.com","Testing", "testing");
-      console.log("mailing success")
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const sendEmail = () => {
+    // e.preventDefault();
+
+      // Hardcoded values for testing
+      const dataToBeSend = {
+        from_name: name,
+        from_email: email,
+        subject: sub,
+        message: `You recieved a mail from ${name} with email : ${email} . Subject : ${sub}  and message read as follows : ${msg}`
+      };
+    
+      emailjs.send(
+        'service_ix0jvam',  // Your EmailJS service ID
+        'template_rhx8uz4',  // Your EmailJS template ID
+        dataToBeSend,        // Object instead of a string
+        '4wfPMYREujwU-Bxjy'  // Your EmailJS user ID
+      ) 
+      .then(
+        (result) => {
+          console.log('Success:', result.text);
+          alert('Test email sent successfully!');
+        },
+        (error) => {
+          console.log('Error:', error.text);
+          alert('Error sending test email. Please try again.');
+        }
+      );
+    };
+  
 
   return (
     <div id="contact" className="">
@@ -42,26 +63,30 @@ const Contact = () => {
             className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
             type="text"
             placeholder="Full Name"
+            onChange={(e)=>setName(e.target.value)}
           />
           <br />
           <input
             className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
             type="email"
             placeholder="Email"
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <input
             className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
             type="text"
             placeholder="Subject"
+            onChange={(e)=>setSub(e.target.value)}
           />
           <br />
           <textarea
             className="border text-sm  border-gray-200 rounded-md my-4 px-3 py-2 w-full h-20 bg-gray-200"
             type="text"
             placeholder="Biref your project idea or service over here "
+            onChange={(e)=>setMsg(e.target.value)}
           />
           <button
-            onClick={MailFunction}
+            onClick={sendEmail}
             type="submit"
             className="text-white bg-orange-600 p-3 w-full rounded-lg hover:bg-orange-500"
           >

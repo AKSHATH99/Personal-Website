@@ -57,7 +57,7 @@ const About = () => {
       className: "h-16 m-4 md:h-16",
     },
     {
-      src: "/images/framer.png",
+      src: "/images/motion.png",
       alt: "Framer icon",
       className: "h-16 m-4 md:h-16",
     },
