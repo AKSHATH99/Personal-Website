@@ -24,9 +24,9 @@ const HeaderResponsive = () => {
   }, []);
 
   return (
-    <div className='text-sm fixed w-full  '>
-      <div className="   " style={{ marginTop: isScrolled ? "0px" : "" }}>
-        <ul className="flex  justify-around border border-orange-500 text-orange-500  bg-gray-900  shadow-2xl">
+    <div className='text-sm fixed w-1/3 h-[500px] z-50  '>
+      <div className=" relative left-30  " style={{ marginTop: isScrolled ? "0px" : "" }}>
+        <ul className="flex flex-col  justify-around border text-orange-500  bg-gray-900  shadow-2xl">
         <Link to="body" spy={true} smooth={true} duration={500}>
           <li
             className={` p-3 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${

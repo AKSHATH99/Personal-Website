@@ -46,11 +46,11 @@ const Header = () => {
         isScrolled ? "bg-transparent" : "h-20"
       } bg-gray-500 flex text-white transition-all duration-300 fixed top-0 z-50 `}
     >
-      <div className={ `flex 320:pl-2 pl-4 ${isScrolled ? "hidden" : "block"} `}>
+      <div className={`flex 320:pl-2 pl-4 ${isScrolled ? "hidden" : "block"} `}>
         <img
           className="rounded-lg  h-12 w-12 mt-4 "
           src="/images/icons8-source-code-50.png"
-              alt="Profile"
+          alt="Profile"
         />
         <h1 className="md:mt-7 mt-5 md:text-xl font-mono font-bold ml-4 s  ">
           AKSHATH'S PORTFOLIO
@@ -125,25 +125,32 @@ const Header = () => {
         </ul>
       </div>
       <button
-        onClick={()=>{redirectToDrive()}}
-        className={`flex ${
-          isScrolled ? "hidden" : "block"
-        }    block md:ml-24 mt-5  w-36 h-[43px] border border-yellow-100   text-yellow-100  bg-black rounded-lg  shadow-2xl shadow-black       justify-center items-center
-      hover:bg-[#2c342e]  transition duration-300 ease-in-out  `}
+        onClick={() => redirectToDrive()}
+        className={`flex ${isScrolled ? "hidden" : "flex"} 
+      md:ml-24 ml-20 mt-5 md:w-36 w-full max-w-[150px] md:h-[43px] h-[38px] 
+      border border-yellow-100 text-yellow-100 bg-black 
+      rounded-lg shadow-2xl shadow-black 
+      justify-center items-center 
+      hover:bg-[#2c342e] transition duration-300 ease-in-out`}
       >
-        <img className="h-[25px] w-[25px] mr-[3px]" src="/images/resume.png" />
-        <a src="">
-        Resume
-      </a>
+        <img
+          className="h-[25px] w-[25px] mr-[3px]"
+          src="/images/resume.png"
+          alt="Resume"
+        />
+        <a href="/your-resume.pdf" download>
+          Resume
+        </a>
       </button>
-      <div
+
+      {/* <div
         onClick={() => handleSidebar()}
-        className={`bg-white h-7 w-7 mt-7 flex xl:hidden items-center justify-center mx-10 md:hidden 800:block 320:ml-2 320:mr-0 ${
+        className={` h-7 w-7 mt-7 flex xl:hidden items-center justify-center mx-10 md:hidden 800:block 320:ml-2 320:mr-0 ${
           isScrolled ? "hidden" : "block"
         }`}
       >
-        <img src="/images/menu-line.png" />
-      </div>
+        <img src="/images/menu.png" />
+      </div> */}
     </div>
   );
 };

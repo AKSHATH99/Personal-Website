@@ -27,9 +27,9 @@ const Body = () => {
       id="body"
       className="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 h-screen "
     >
-      <div className={` ${isScrolled ? "mt-0 " : "mt-20 "}`}>
+      {/* <div className={` ${isScrolled ? "mt-0 " : "mt-20 "}`}>
         {sidebar ? <HeaderResponsive /> : null}
-      </div>
+      </div> */}
 
       <div className=" md:mb-0  text-black flex flex-col justify-center items-center">
         <div className="md:flex md:justify-center md:items-center xl:mt-44 320:mt-10 ">
