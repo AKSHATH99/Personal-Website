@@ -20,6 +20,15 @@ const ProjectData = [
     placeholderImage: "/images/FOOD-MENU.png",
     stack: ["/logo192.png", "/images/tailwind.png"],
   },
+  {
+    title: "Formatify ",
+    Livelink: "https://formatify-silk.vercel.app/",
+    Githublink: "https://github.com/AKSHATH99/formatify",
+    about:
+      "Application allows user to format their code in their favourite code editor theme and download / Copy png file of the formatted code . Also intergrated Gemini API to explain the code they formatted ",
+    placeholderImage: "/images/formatify.png",
+    stack: ["/logo192.png", "/images/tailwind.png","/images/ts.svg" ,"/images/gemini.svg"],
+  },
 
   // {
   //   title: "WEATHER APP",

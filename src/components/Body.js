@@ -55,15 +55,15 @@ const Body = () => {
             <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">
               Full-Stack Developer.
             </p>
-            <p className="w-full md:w-96 my-3 md:text-lg   font-ubuntu">
-              I build full stack web apps on MERN stack focusing on a eye for
-              responsive design and efficient functionality .
+            <p className="w-full md:w-[500px] mt-3 md:text-lg   font-ubuntu">
+            Coding up web experiences that are fun to use and easy on the eyes.
+            </p>
               <br />
-              <p className="font-bold">
+              <p className="font-bold md:w-96 w-full -mt-3">
                 Looking out for full time roles , internships or freelance
                 projects and collaboration."
               </p>
-            </p>
+            
             <div className="flex justify-center md:justify-start">
               <motion.a
                 href="https://www.linkedin.com/in/akshath-p-519939287/"
