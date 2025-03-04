@@ -69,27 +69,27 @@ const Contact = () => {
         <div class="border  md:w-[500px] p-5 md:ml-44 m-6  rounded-lg shadow-xl">
           {/* <p className='text-xl font-roboto text-orange-600 ml-32 font-bold '>Drop A Mail </p> */}
           <input
-            className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
+             className=" text-sm  rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200 focus:outline-none "
             type="text"
             placeholder="Full Name"
             onChange={(e)=>setName(e.target.value)}
           />
           <br />
           <input
-            className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
+            className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200 focus:outline-none"
             type="email"
             placeholder="Email"
             onChange={(e)=>setEmail(e.target.value)}
           />
           <input
-            className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200"
+            className="border text-sm border-gray-200 rounded-md my-4 p-3 py-1 w-full h-10 bg-gray-200 focus:outline-none"
             type="text"
             placeholder="Subject"
             onChange={(e)=>setSub(e.target.value)}
           />
           <br />
           <textarea
-            className="border text-sm  border-gray-200 rounded-md my-4 px-3 py-2 w-full h-20 bg-gray-200"
+            className="border text-sm  border-gray-200 rounded-md my-4 px-3 py-2 w-full h-20 bg-gray-200 focus:outline-none"
             type="text"
             placeholder="Biref your project idea or service over here "
             onChange={(e)=>setMsg(e.target.value)}

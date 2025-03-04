@@ -56,7 +56,7 @@ const Body = () => {
               Full-Stack Developer.
             </p>
             <p className="w-full md:w-[500px] mt-3 md:text-lg   font-ubuntu">
-            Coding up web experiences that are fun to use and easy on the eyes.
+            I built full stack web apps.
             </p>
               <br />
               <p className="font-bold md:w-96 w-full -mt-3">

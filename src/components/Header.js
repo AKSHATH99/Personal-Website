@@ -44,7 +44,7 @@ const Header = () => {
     <div
       className={`w-full  ${
         isScrolled ? "bg-transparent" : "h-20"
-      } bg-gray-500 flex text-white transition-all duration-300 fixed top-0 `}
+      } bg-gray-500 flex text-white transition-all duration-300 fixed top-0 z-50 `}
     >
       <div className={ `flex 320:pl-2 pl-4 ${isScrolled ? "hidden" : "block"} `}>
         <img
@@ -58,7 +58,7 @@ const Header = () => {
       </div>
 
       <div
-        className=" block md:block 800:hidden xl:block z-50  "
+        className=" block md:block 800:hidden xl:block   "
         style={{ marginLeft: isScrolled ? "290px" : "0" }}
       >
         <ul className="xl:flex 320:hidden  ml-28 mt-3 justify-around border border-yellow-100 text-yellow-100  bg-gray-900 rounded-xl shadow-2xl">
@@ -128,12 +128,12 @@ const Header = () => {
         onClick={()=>{redirectToDrive()}}
         className={`flex ${
           isScrolled ? "hidden" : "block"
-        }    block md:ml-28 mt-5 w-36 h-12 border border-yellow-100   text-yellow-100  bg-black rounded-xl shadow-2xl shadow-black       justify-center items-center
-        hover:bg-gray-600  transition duration-300 ease-in-out  `}
+        }    block md:ml-24 mt-5  w-36 h-[43px] border border-yellow-100   text-yellow-100  bg-black rounded-lg  shadow-2xl shadow-black       justify-center items-center
+      hover:bg-[#2c342e]  transition duration-300 ease-in-out  `}
       >
-        {/* <img src="/images/download-line.png" /> */}
+        <img className="h-[25px] w-[25px] mr-[3px]" src="/images/resume.png" />
         <a src="">
-        Hire Me 
+        Resume
       </a>
       </button>
       <div
