@@ -52,14 +52,14 @@ const Body = () => {
                 Akshath P
               </motion.span>
             </p>
-            <p className="w-72 md:w-full text-xl md:text-3xl text-orange-900">
+            <p className="w-72 md:w-full md:ml-0 ml-[75px] text-xl md:text-3xl text-orange-900">
               Full-Stack Developer.
             </p>
-            <p className="w-full md:w-[500px] mt-3 md:text-lg   font-ubuntu">
+            <p className="w-full md:w-[500px] mt-3 md:text-lg md:-ml-0 -ml-6  font-ubuntu">
             I built full stack web apps.
             </p>
               <br />
-              <p className="font-bold md:w-96 w-full -mt-3">
+              <p className="font-bold md:w-96 w-3/4 md:ml-0 ml-16 -mt-3 md:font-xl">
                 Looking out for full time roles , internships or freelance
                 projects and collaboration."
               </p>
