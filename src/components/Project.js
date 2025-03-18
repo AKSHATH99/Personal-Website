@@ -12,6 +12,15 @@ const ProjectData = [
     stack: ["/logo192.png", ,"/images/database.png","/images/expressjs.png","/images/node.png","/images/tailwind.png","/images/motion.png"],
   },
   {
+    title: "Pharm-locator ",
+    Livelink: "https://pharm-locator.vercel.app/",
+    Githublink: "",
+    about:
+      "Pharm-locator is build using OpenStreetMap API and allows user to find nearby medical services in their location in real time and find the easiest path to location . Leaflet and react-leaflet is used to mark medical store locations . Leaflet Routing machine is used to mark the easiest route to medical services",
+    placeholderImage:"/images/pharm-locator.png",
+    stack: ["/logo192.png","/images/tailwind.png","/images/Openstreetmap.svg.png", "/images/leaflet.png"],
+  },
+  {
     title: "Formatify ",
     Livelink: "https://formatify-silk.vercel.app/",
     Githublink: "https://github.com/AKSHATH99/formatify",
