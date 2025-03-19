@@ -13,7 +13,7 @@ import Project from './components/Project';
 function App() {
   return (
     <Provider store={store}>
-    <div>
+    <div className='bg-gray-950'>
     <Header/>
       <Body/>
       <About/>
