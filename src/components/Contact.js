@@ -50,7 +50,7 @@ const Contact = () => {
   
 
   return (
-    <div id="contact" className="text-white  md:ml-[190px] p-5 pb-10">
+    <div id="contact" className="text-white  md:ml-[170px] p-5 pb-10">
       <div className="text-2xl mt-20 font-bold  w-max  ">
         CONTACT ME
       </div>
@@ -145,7 +145,7 @@ const Contact = () => {
 
         <div className="">
           {/* <img src="/images/contact image.png" /> */}
-          <p className="md:ml-32 md:mt-0 mt-10 font-poppins">Find me in my socials and profiles : </p>
+          <p className="md:ml-24 md:mt-0 mt-10 font-poppins">Find me in my socials and profiles : </p>
           <div className="flex items-center justify-center md:ml-32">
             <div class="flex items-center gap-5 mt-3">
             <motion.a 
