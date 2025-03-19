@@ -21,7 +21,7 @@ const ProjectBox = ({ data }) => {
         scale: 1.05,
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
       }}
-      className="rounded-xl hover:cursor-pointer p-3 mb-28 m-4 w-[400px] h-[300px] relative overflow-hidden"
+      className="rounded-xl hover:cursor-pointer p-3 mb-10 m-4 w-[400px] h-[300px] relative overflow-hidden"
     >
 
       <img
@@ -39,7 +39,7 @@ const ProjectBox = ({ data }) => {
         className={`absolute top-0 left-0 w-full h-full bg-white/50 backdrop-blur-md rounded-xl flex flex-col justify-between p-5`}
       >
         <div>
-          <h1 className="text-2xl font-bold text-orange-700">{data.title}</h1>
+          <h1 className="text-2xl font-bold text-themeViolet">{data.title}</h1>
           <div className="flex mt-4">
             <a
               onClick={(e) => {

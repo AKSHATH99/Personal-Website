@@ -44,9 +44,9 @@ const Header = () => {
     <div
       className={`w-full  ${
         isScrolled ? "bg-transparent" : "h-20"
-      } bg-gray-500 flex text-white transition-all duration-300 fixed top-0 z-50 `}
+      } flex justify-center text-white transition-all duration-300 fixed top-0 z-50 `}
     >
-      <div className={`flex 320:pl-2 pl-4 ${isScrolled ? "hidden" : "block"} `}>
+      <div className={`flex 320:pl-2 pl-4 -ml-10 ${isScrolled ? "hidden" : "block"} `}>
         <img
           className="rounded-lg  h-12 w-12 mt-4 "
           src="/images/icons8-source-code-50.png"
@@ -58,13 +58,13 @@ const Header = () => {
       </div>
 
       <div
-        className=" block md:block 800:hidden xl:block   "
+        className=" block md:block 800:hidden xl:block text-[12px]   "
         style={{ marginLeft: isScrolled ? "290px" : "0" }}
       >
-        <ul className="xl:flex 320:hidden  ml-28 mt-3 justify-around border border-yellow-100 text-yellow-100  bg-gray-900 rounded-xl shadow-2xl">
+        <ul className="xl:flex gap-20 p-4 320:hidden  ml-28 mt-3 justify-around border-2 border-themeViolet text-white bg-gray-900 rounded-xl shadow-2xl">
           <Link to="body" spy={true} smooth={true} duration={500}>
             <li
-              className={`m-4 ml-1 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
+              className={` hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
                 isHome ? "border-b-4" : ""
               }`}
               onClick={() => {
@@ -79,7 +79,7 @@ const Header = () => {
           </Link>
           <Link to="about" spy={true} smooth={true} duration={500}>
             <li
-              className={` m-4 ml-16 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
+              className={`  hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300 ${
                 isAbout ? "border-b-4" : ""
               } `}
               onClick={() => {
@@ -94,7 +94,7 @@ const Header = () => {
           </Link>
           <Link to="project" spy={true} smooth={true} duration={500}>
             <li
-              className={` m-4 ml-24 hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300   ${
+              className={`  hover:cursor-pointer hover:text-white hover:border-b-4 transition-all duration-300   ${
                 isProject ? "border-b-4" : ""
               } `}
               onClick={() => {
@@ -109,7 +109,7 @@ const Header = () => {
           </Link>
           <Link to="contact" spy={true} smooth={true} duration={500}>
             <li
-              className={`m-4 ml-16 hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
+              className={` hover:cursor-pointer  hover:text-white hover:border-b-4 transition-all duration-300${
                 isContact ? "border-b-4 " : ""
               } `}
               onClick={() => {
@@ -124,7 +124,7 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-      <button
+      {/* <button
         onClick={() => redirectToDrive()}
         className={`flex ${isScrolled ? "hidden" : "flex"} 
       md:ml-24 ml-20 mt-5 md:w-36 w-full max-w-[150px] md:h-[43px] h-[38px] 
@@ -141,7 +141,7 @@ const Header = () => {
         <a href="/your-resume.pdf" download>
           Resume
         </a>
-      </button>
+      </button> */}
 
       {/* <div
         onClick={() => handleSidebar()}
