@@ -7,6 +7,9 @@ module.exports = {
   mode:"jit",
   theme: {
     extend: {
+      colors: {
+        themeViolet: '#8A2BE2', 
+      },
       animation: {
         marquee: 'marquee 25s linear infinite',
       },
