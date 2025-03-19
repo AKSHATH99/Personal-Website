@@ -63,11 +63,11 @@ const Body = () => {
             I'm currently working as <span className="text-themeViolet"> full stack intern</span> at a startup and have been actively working on <span className="text-themeViolet"> nextjs </span> and <span className="text-themeViolet"> mongodb</span>
             </p>
               <br />
-              <p className=" italic md:w-96 w-3/4 md:ml-0 ml-16 -mt-3 md:font-xl">
+              <p className=" italic md:w-96 w-3/4 md:ml-0 ml-9 -mt-3 md:font-xl">
                 I am actively looking for freelance  gigs , internships and full time roles. Feel free to <span className="text-themeViolet"> <a href="mailto:akshathpkk@gmail.com" className=""> mail</a></span> me  or dm me over my socials for works : )
               </p>
             
-            <div className="flex gap-3 mt-4 justify-center md:justify-start">
+            <div className="flex gap-3 mt-4 justify-center md:justify-start md:-ml-0 -ml-10">
               <motion.a
                 href="https://www.linkedin.com/in/akshath-p-519939287/"
                 target="blank"

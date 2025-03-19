@@ -193,7 +193,7 @@ const About = () => {
     "
       style={{ scrollPadding: "200px" }}
     >
-      <h1 className="text-xl m text-wrap  md:text-2xl md:ml-44 font-mono font-bold mt-10 text-white w-max">
+      <h1 className="text-xl md:w-full w-3/4  text-wrap  md:text-2xl md:ml-44 ml-5  font-mono font-bold mt-10 text-white ">
         Languages and Frameworks I Work On
       </h1>
 
@@ -238,13 +238,12 @@ const About = () => {
         </div>
       </div> */}
 
-      <p className="m-4 my-10 font-bold text-3xl text-orange-950"> </p>
 
       {/* =-----------------------------------FRONTEND ------------------------------ */}
-      <p className="ml-20  md:ml-52 font-Poppins font-bold mt-10 text-xl text-white  ">
+      <p className="ml-5  md:ml-52 font-Poppins font-bold mt-10 text-xl text-white  ">
         FRONTEND
       </p>
-      <div className=" overflow-hidden relative flex w-2/3 mt-4 md:ml-56 ml-20  text-black">
+      <div className=" overflow-hidden relative flex w-2/3 mt-4 md:ml-56 ml-5  text-black">
         <motion.div
           ref={marqueeRef}
           className="flex whitespace-nowrap py-5 px-7"
@@ -272,10 +271,10 @@ const About = () => {
       </div>
 
       {/* =-----------------------------------BACKEND ------------------------------ */}
-      <p className="md:ml-52 ml-20 font-Poppins font-bold mt-5 text-xl text-white">
+      <p className="md:ml-52 ml-5 font-Poppins font-bold mt-5 text-xl text-white">
         BACKEND
       </p>
-      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-20 text-black">
+      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-5 text-black">
         <motion.div
           ref={marqueeRef}
           className="flex whitespace-nowrap py-5 px-7"
@@ -303,10 +302,11 @@ const About = () => {
       </div>
 
       {/* ----------------------------------------TOOLS SECTIONS------------------------ */}
-      <p className="md:ml-52 ml-20 font-Poppins font-bold mt-4 text-xl text-white">
+      
+      <p className="md:ml-52 ml-5 font-Poppins font-bold mt-4 text-xl text-white">
         TOOLS & PACKAGES
       </p>
-      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-20   text-black">
+      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-5   text-black">
         <motion.div
           ref={marqueeRef}
           className="flex whitespace-nowrap py-3 px-7"
