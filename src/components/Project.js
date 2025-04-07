@@ -49,15 +49,6 @@ const ProjectData = [
       "/images/gemini.svg",
     ],
   },
-  {
-    title: "FOOD-ZONE",
-    Livelink: "https://food-zone-vert.vercel.app/",
-    Githublink: "https://github.com/AKSHATH99/FOOD-ZONE",
-    about:
-      "The project is aimed at creating frontend of a restaurent website.It includes features of online delivery system i.e. a foomenu and cart sections using React.js for a dynamic user interface and Tailwind CSS for a clean and visually appealing design",
-    placeholderImage: "/images/FOOD-MENU.png",
-    stack: ["/logo192.png", "/images/tailwind.png"],
-  },
 
   // {
   //   title: "WEATHER APP",
