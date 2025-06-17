@@ -9,57 +9,57 @@ const About = () => {
     {
       src: "/images/html5-icon-12117.png",
       alt: "HTML5 icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2 border- p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
-    { src: "/images/css.png", alt: "CSS icon",className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { src: "/images/css.png", alt: "CSS icon",className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
     {
       src: "/images/js.png",
       alt: "JavaScript icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
-    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
+    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
     {
       src: "/images/tailwind.png",
       alt: "Tailwind icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/python.png",
       alt: "Python icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/motion.png",
       alt: "Framer icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     // Duplicates
     {
       src: "/images/html5-icon-12117.png",
       alt: "HTML5 icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
-    { src: "/images/css.png", alt: "CSS icon", className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { src: "/images/css.png", alt: "CSS icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
     {
       src: "/images/js.png",
       alt: "JavaScript icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
-    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
+    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
     {
       src: "/images/tailwind.png",
       alt: "Tailwind icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/python.png",
       alt: "Python icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/motion.png",
       alt: "Framer icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
   ];
 
@@ -67,53 +67,53 @@ const About = () => {
     {
       src: "/images/nextjs.png",
       alt: "Next.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/mongo.png",
       alt: "MongoDB icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/express2.png",
       alt: "Express.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/nodejs2.png",
       alt: "Node.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/mysql.png",
       alt: "MySQL icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     // Duplicates
     {
       src: "/images/nextjs.png",
       alt: "Next.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/mongo.png",
       alt: "MongoDB icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/express2.png",
       alt: "Express.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/nodejs2.png",
       alt: "Node.js icon",
-       className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/mysql.png",
       alt: "MySQL icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
   ];
 
@@ -121,50 +121,50 @@ const About = () => {
     {
       src: "/images/vs code.png",
       alt: "VS Code icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
       whileHover: { scale: 1.5 },
     },
-    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
     {
       src: "/images/github.png",
       alt: "GitHub icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/vercel.png",
       alt: "Vercel icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/Git-Icon.png",
       alt: "Git icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/figma.png",
       alt: "Figma icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/vs code.png",
       alt: "VS Code icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
-    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
     {
       src: "/images/github.png",
       alt: "GitHub icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/vercel.png",
       alt: "Vercel icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
     {
       src: "/images/Git-Icon.png",
       alt: "Git icon",
-      className: "h-16 m-4 md:h-16 border-2 border-themeViolet p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
     },
   ];
 
@@ -189,7 +189,7 @@ const About = () => {
       id="about"
       // className="  h-full  p-8 bg-gradient-to-r from-rose-100 to-teal-100 scroll-p-44
       // className="  h-full  p-8 bg-gradient-to-r from-gray-300 via-gray-300 to-black
-      className="  h-full  mt-20 ml-4 bg-gray-950
+      className="  h-full  -mt-10 pt-36 ml- bg-gray-950
     "
       style={{ scrollPadding: "200px" }}
     >

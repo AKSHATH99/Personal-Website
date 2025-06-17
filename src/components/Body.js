@@ -37,7 +37,7 @@ const Body = () => {
             <img
               alt="gif"
               className="w-72 h-44 md:w-96 md:h-72 m-5  320:h-44 320:w-44  md:m-0 mx-auto"
-              src="/images/hero-image.png"
+              src="/images/logo192.png"
             />
           </div>
 

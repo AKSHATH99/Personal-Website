@@ -49,6 +49,19 @@ const ProjectData = [
       "/images/gemini.svg",
     ],
   },
+  {
+    title: "Landing Page ",
+    Livelink: "https://landing-page-one-gold-46.vercel.app/",
+    Githublink: "https://github.com/AKSHATH99/formatify",
+    about:
+      "landing Page built using Tailwind CSS and Framer Motion for animations . It is a responsive landing page with smooth animations and transitions . It is a simple yet elegant design for event management platform ",
+    placeholderImage: "/images/landing-page.png",
+    stack: [
+      "/logo192.png",
+      "/images/tailwind.png",
+      "/images/motion.png",
+    ],
+  },
 
   // {
   //   title: "WEATHER APP",

@@ -13,7 +13,8 @@ import Project from './components/Project';
 function App() {
   return (
     <Provider store={store}>
-    <div className='bg-gray-950'>
+      <div className='bg-gray-950 w-screen overflow-x-hidden'>
+
     <Header/>
       <Body/>
       <About/>
