@@ -1,0 +1,154 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a6a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a4a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a3a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Developer character -->
+  <g transform="translate(120, 80)">
+    <!-- Head -->
+    <ellipse cx="0" cy="0" rx="28" ry="32" fill="#d4a574"/>
+    
+    <!-- Hair -->
+    <path d="M -28 -15 Q 0 -35 28 -15 Q 25 -30 0 -32 Q -25 -30 -28 -15" fill="#4a4a4a"/>
+    
+    <!-- Eyes -->
+    <circle cx="-10" cy="-5" r="4" fill="white"/>
+    <circle cx="10" cy="-5" r="4" fill="white"/>
+    <circle cx="-10" cy="-5" r="2" fill="#333"/>
+    <circle cx="10" cy="-5" r="2" fill="#333"/>
+    
+    <!-- Eyebrows -->
+    <path d="M -15 -12 Q -10 -14 -5 -12" stroke="#4a4a4a" stroke-width="2" fill="none"/>
+    <path d="M 5 -12 Q 10 -14 15 -12" stroke="#4a4a4a" stroke-width="2" fill="none"/>
+    
+    <!-- Nose -->
+    <ellipse cx="0" cy="2" rx="1.5" ry="3" fill="#c4956a"/>
+    
+    <!-- Mouth -->
+    <path d="M -5 12 Q 0 16 5 12" stroke="#8a8a8a" stroke-width="1.5" fill="none"/>
+    
+    <!-- Neck -->
+    <rect x="-8" y="25" width="16" height="15" fill="#d4a574"/>
+    
+    <!-- Body/Shirt -->
+    <ellipse cx="0" cy="70" rx="45" ry="50" fill="#8b5cf6"/>
+    
+    <!-- Arms -->
+    <ellipse cx="-35" cy="60" rx="15" ry="35" fill="#8b5cf6" transform="rotate(-25 -35 60)"/>
+    <ellipse cx="35" cy="60" rx="15" ry="35" fill="#8b5cf6" transform="rotate(25 35 60)"/>
+    
+    <!-- Hands positioned on laptop -->
+    <ellipse cx="-45" cy="85" rx="10" ry="12" fill="#d4a574" transform="rotate(-15 -45 85)"/>
+    <ellipse cx="45" cy="85" rx="10" ry="12" fill="#d4a574" transform="rotate(15 45 85)"/>
+  </g>
+  
+  <!-- Laptop -->
+  <g transform="translate(200, 160)">
+    <!-- Laptop base -->
+    <ellipse cx="0" cy="50" rx="90" ry="18" fill="url(#laptopGradient)"/>
+    <rect x="-80" y="32" width="160" height="36" rx="6" fill="url(#laptopGradient)"/>
+    
+    <!-- Laptop screen -->
+    <rect x="-75" y="-45" width="150" height="100" rx="8" fill="#2a2a4a"/>
+    <rect x="-70" y="-40" width="140" height="90" rx="5" fill="url(#screenGradient)"/>
+    
+    <!-- Code lines on screen -->
+    <rect x="-65" y="-32" width="35" height="4" fill="#8b5cf6"/>
+    <rect x="-25" y="-32" width="50" height="4" fill="#06b6d4"/>
+    <rect x="-65" y="-22" width="55" height="4" fill="#10b981"/>
+    <rect x="-5" y="-22" width="30" height="4" fill="#f59e0b"/>
+    <rect x="-65" y="-12" width="40" height="4" fill="#8b5cf6"/>
+    <rect x="-20" y="-12" width="60" height="4" fill="#06b6d4"/>
+    <rect x="-65" y="-2" width="70" height="4" fill="#10b981"/>
+    <rect x="-65" y="8" width="45" height="4" fill="#f59e0b"/>
+    <rect x="-15" y="8" width="35" height="4" fill="#8b5cf6"/>
+    <rect x="-65" y="18" width="25" height="4" fill="#06b6d4"/>
+    <rect x="-35" y="18" width="40" height="4" fill="#10b981"/>
+    <rect x="-65" y="28" width="60" height="4" fill="#8b5cf6"/>
+    
+    <!-- Terminal cursor -->
+    <rect x="5" y="28" width="3" height="4" fill="#10b981">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Keyboard -->
+    <g transform="translate(0, 42)">
+      <rect x="-60" y="-10" width="120" height="20" rx="3" fill="#1a1a2a"/>
+      <!-- Key rows -->
+      <g fill="#4a4a6a">
+        <!-- Top row -->
+        <rect x="-55" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-47" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-39" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-31" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-23" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-15" y="-8" width="6" height="4" rx="1"/>
+        <rect x="-7" y="-8" width="6" height="4" rx="1"/>
+        <rect x="1" y="-8" width="6" height="4" rx="1"/>
+        <rect x="9" y="-8" width="6" height="4" rx="1"/>
+        <rect x="17" y="-8" width="6" height="4" rx="1"/>
+        <rect x="25" y="-8" width="6" height="4" rx="1"/>
+        <rect x="33" y="-8" width="6" height="4" rx="1"/>
+        <rect x="41" y="-8" width="6" height="4" rx="1"/>
+        
+        <!-- Middle row -->
+        <rect x="-52" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-44" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-36" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-28" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-20" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-12" y="-2" width="6" height="4" rx="1"/>
+        <rect x="-4" y="-2" width="6" height="4" rx="1"/>
+        <rect x="4" y="-2" width="6" height="4" rx="1"/>
+        <rect x="12" y="-2" width="6" height="4" rx="1"/>
+        <rect x="20" y="-2" width="6" height="4" rx="1"/>
+        <rect x="28" y="-2" width="6" height="4" rx="1"/>
+        
+        <!-- Bottom row -->
+        <rect x="-40" y="4" width="35" height="4" rx="1"/>
+        <rect x="0" y="4" width="35" height="4" rx="1"/>
+      </g>
+    </g>
+    
+    <!-- Trackpad -->
+    <rect x="-15" y="58" width="30" height="20" rx="3" fill="#3a3a5a" opacity="0.7"/>
+  </g>
+  
+  <!-- Floating code elements around the scene -->
+  <g opacity="0.6">
+    <!-- Left side brackets -->
+    <text x="50" y="120" font-family="monospace" font-size="24" fill="#8b5cf6">{</text>
+    <text x="50" y="180" font-family="monospace" font-size="24" fill="#8b5cf6">}</text>
+    
+    <!-- Right side brackets -->
+    <text x="350" y="100" font-family="monospace" font-size="20" fill="#06b6d4">&lt;</text>
+    <text x="370" y="100" font-family="monospace" font-size="20" fill="#06b6d4">/&gt;</text>
+    
+    <!-- Floating symbols -->
+    <text x="80" y="50" font-family="monospace" font-size="16" fill="#10b981">( )</text>
+    <text x="320" y="50" font-family="monospace" font-size="16" fill="#f59e0b">[ ]</text>
+    
+    <!-- Semicolon -->
+    <text x="60" y="250" font-family="monospace" font-size="18" fill="#8b5cf6">;</text>
+    <text x="340" y="230" font-family="monospace" font-size="18" fill="#06b6d4">;</text>
+  </g>
+  
+  <!-- Coffee cup -->
+  <g transform="translate(90, 200)">
+    <rect x="0" y="0" width="16" height="20" rx="3" fill="#8b4513"/>
+    <rect x="2" y="2" width="12" height="16" fill="#d2691e"/>
+    <ellipse cx="8" cy="3" rx="5" ry="1.5" fill="#8b4513" opacity="0.3"/>
+    <path d="M 16 6 Q 22 6 22 12 Q 22 18 16 18" stroke="#8b4513" stroke-width="2" fill="none"/>
+    <!-- Steam -->
+    <path d="M 4 -3 Q 4 -7 6 -7 Q 6 -3 4 -3" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.7"/>
+    <path d="M 8 -3 Q 8 -7 10 -7 Q 10 -3 8 -3" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.7"/>
+    <path d="M 12 -3 Q 12 -7 14 -7 Q 14 -3 12 -3" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.7"/>
+  </g>
+</svg>

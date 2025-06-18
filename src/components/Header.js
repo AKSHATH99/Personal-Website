@@ -89,7 +89,7 @@ const Header = () => {
                 setisHome(false);
               }}
             >
-              ABOUT ME
+              BLOGS
             </li>
           </Link>
           <Link to="project" spy={true} smooth={true} duration={500}>

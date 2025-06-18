@@ -7,328 +7,216 @@ const About = () => {
   // IMG URL FOR STACK INFORMATION
   const frontendImages = [
     {
-      src: "/images/html5-icon-12117.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       alt: "HTML5 icon",
-      className: "h-16 m-4 md:h-16 border-2 border- p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "HTML5"
     },
-    { src: "/images/css.png", alt: "CSS icon",className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { 
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
+      alt: "CSS icon",
+      name: "CSS3"
+    },
     {
-      src: "/images/js.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       alt: "JavaScript icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "JavaScript"
     },
-    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
+    { 
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
+      alt: "React icon",
+      name: "React"
+    },
     {
-      src: "/images/tailwind.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
       alt: "Tailwind icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Tailwind"
     },
     {
-      src: "/images/python.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
       alt: "Python icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Python"
     },
     {
-      src: "/images/motion.png",
+      src: "https://www.framer.com/images/favicons/favicon.ico",
       alt: "Framer icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    // Duplicates
-    {
-      src: "/images/html5-icon-12117.png",
-      alt: "HTML5 icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    { src: "/images/css.png", alt: "CSS icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
-    {
-      src: "/images/js.png",
-      alt: "JavaScript icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    { src: "/logo192.png", alt: "React icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",},
-    {
-      src: "/images/tailwind.png",
-      alt: "Tailwind icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/python.png",
-      alt: "Python icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/motion.png",
-      alt: "Framer icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Framer Motion"
     },
   ];
 
   const backendImages = [
     {
-      src: "/images/nextjs.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       alt: "Next.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Next.js"
     },
     {
-      src: "/images/mongo.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       alt: "MongoDB icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "MongoDB"
     },
     {
-      src: "/images/express2.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       alt: "Express.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Express.js"
     },
     {
-      src: "/images/nodejs2.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       alt: "Node.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Node.js"
     },
     {
-      src: "/images/mysql.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       alt: "MySQL icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    // Duplicates
-    {
-      src: "/images/nextjs.png",
-      alt: "Next.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/mongo.png",
-      alt: "MongoDB icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/express2.png",
-      alt: "Express.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/nodejs2.png",
-      alt: "Node.js icon",
-       className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/mysql.png",
-      alt: "MySQL icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "MySQL"
     },
   ];
 
   const toolsImages = [
     {
-      src: "/images/vs code.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
       alt: "VS Code icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-      whileHover: { scale: 1.5 },
+      name: "VS Code"
     },
-    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
+    { 
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg", 
+      alt: "NPM icon",
+      name: "NPM"
+    },
     {
-      src: "/images/github.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       alt: "GitHub icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "GitHub"
     },
     {
-      src: "/images/vercel.png",
-      alt: "Vercel icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/Git-Icon.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       alt: "Git icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Git"
     },
     {
-      src: "/images/figma.png",
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
       alt: "Figma icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/vs code.png",
-      alt: "VS Code icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    { src: "/images/npm.png", alt: "NPM icon", className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity", },
-    {
-      src: "/images/github.png",
-      alt: "GitHub icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/vercel.png",
-      alt: "Vercel icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
-    },
-    {
-      src: "/images/Git-Icon.png",
-      alt: "Git icon",
-      className: "h-16 m-4 md:h-16 border-2  p-3 rounded-lg bg-white/30 backdrop-blur-md  opacity",
+      name: "Figma"
     },
   ];
 
-  useEffect(() => {
-    const marquee = marqueeRef.current;
-    const marqueeWidth = marquee.scrollWidth;
-    const containerWidth = marquee.offsetWidth;
+  // Create duplicated arrays for seamless scrolling
+  const duplicatedFrontend = [...frontendImages, ...frontendImages];
+  const duplicatedBackend = [...backendImages, ...backendImages];
+  const duplicatedTools = [...toolsImages, ...toolsImages];
 
-    const scrollInterval = setInterval(() => {
-      marquee.scrollLeft += 1; // Adjust scroll speed as needed
+  const TechIcon = ({ image, index }) => (
+    <motion.div
+      key={index}
+      className="relative group mx-3 my-2"
+      whileHover={{ scale: 1.1, y: -5 }}
+      animate={{ 
+        y: [0, -3, 0],
+        rotateY: [0, 5, 0]
+      }}
+      transition={{ 
+        duration: 2 + (index * 0.1), 
+        repeat: Infinity, 
+        ease: "easeInOut",
+        delay: index * 0.1
+      }}
+    >
+      {/* Enhanced background with multiple layers for better visibility */}
+      <div className="relative p-4 rounded-xl bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300">
+        {/* Inner glow effect */}
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        {/* Icon container with better contrast */}
+        <div className="relative z-10 w-12 h-12 flex items-center justify-center bg-white/90 rounded-lg shadow-inner">
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="w-8 h-8 object-contain filter drop-shadow-sm"
+          />
+        </div>
+        
+        {/* Tooltip */}
+        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-20">
+          {image.name}
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+        </div>
+      </div>
+    </motion.div>
+  );
 
-      if (marquee.scrollLeft >= marqueeWidth - containerWidth) {
-        marquee.scrollLeft = 0; // Reset scroll position for seamless loop
-      }
-    }, 5); // Adjust interval for scrolling speed
-
-    return () => clearInterval(scrollInterval);
-  }, []);
+  const MarqueeSection = ({ title, images, duplicatedImages }) => (
+    <motion.div 
+      className="mb-12"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="flex items-center mb-6 ml-5 md:ml-52">
+        {/* <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-4"></div> */}
+        <h3 className="font-bold text-xl text-white font-mono tracking-wider">
+          {title}
+        </h3>
+      </div>
+      
+      <div className="relative overflow-hidden ml-5 md:ml-56">
+        {/* Gradient overlays for smooth edge fade - using transparent instead of gray-950 */}
+        <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-black/50 to-transparent z-10"></div>
+        
+        <motion.div
+          className="flex"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ 
+            repeat: Infinity, 
+            duration: 20, 
+            ease: "linear"
+          }}
+        >
+          {duplicatedImages.map((image, index) => (
+            <TechIcon key={index} image={image} index={index} />
+          ))}
+        </motion.div>
+      </div>
+    </motion.div>
+  );
 
   return (
     <div
       id="about"
-      // className="  h-full  p-8 bg-gradient-to-r from-rose-100 to-teal-100 scroll-p-44
-      // className="  h-full  p-8 bg-gradient-to-r from-gray-300 via-gray-300 to-black
-      className="  h-full  -mt-10 pt-36 ml- bg-gray-950
-    "
+      className="min-h-screen -mt-10 pt-36 relative"
       style={{ scrollPadding: "200px" }}
     >
-      <h1 className="text-xl md:w-full w-3/4  text-wrap  md:text-2xl md:ml-44 ml-5  font-mono font-bold mt-10 text-white ">
-        Languages and Frameworks I Work On
-      </h1>
+      <div className="relative z-10">
+        {/* Main Title */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-2xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 text-white mb-4">
+            Stack I've Worked On  
+          </h1>
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ml-5 md:ml-52 mb-2"></div>
+          {/* <p className="text-gray-300 ml-5 md:ml-52 text-lg">I Have Worked On So Far</p> */}
+        </motion.div>
 
-      {/* <div className="flex 4xl:block ">
-        <div className="w-full">
-          <p className="text-base md:text-xl text-black  m-4  mt-14 text-justify">
-            Hello there! I'm{" "}
-            <span className="text-orange-600 font-bold">Akshath P</span>, a
-            dedicated and enthusiastic BCA student with a passion for{" "}
-            <span className="">Web Development. </span> Currently pursuing my
-            Bachelor's degree, I've immersed myself in the world of coding,
-            sharpening my skills in{" "}
-            <span className="text-orange-600 font-bold">
-              HTML, CSS, JavaScript, and React.js.
-            </span>
-            <br />
-          </p>
-
-          <p className="font-bold text-3xl mt-20 ml-5 4xl:ml-3">
-            {" "}
-            What <span className=" text-orange-600">Drives</span> Me 🚀{" "}
-          </p>
-          <p className=" text-black md:text-xl text-justify ml-6 800:w-full">
-            {" "}
-            I'm a aspiring Frontend Developer who turns ideas into awesome
-            websites. 💻✨ I specialize in creating user-friendly designs that
-            make a lasting impression. 🎨 Let's build something amazing together
-            and bring your vision to the digital world! 🌐{" "}
-          </p>
-          <p className="mt-20 md:text-xl text-justify ml-5 800:w-full">
-            As someone entirely new to this field, I am eager to gain valuable
-            experience and am actively seeking opportunities for collaboration.
-          </p>
-        </div>
-
-        <div className="w-full h-full xl:mr-32 hidden md:block 800:mr-3  ">
-          <img
-            src="/images/image 2.png"
-            alt="Profile"
-            className="w-full h-full 4xl:hidden "
+        {/* Sections */}
+        <div className="mt-16 space-y-8">
+          <MarqueeSection 
+            title="FRONTEND" 
+            images={frontendImages} 
+            duplicatedImages={duplicatedFrontend} 
+          />
+          <MarqueeSection 
+            title="BACKEND" 
+            images={backendImages} 
+            duplicatedImages={duplicatedBackend} 
+          />
+          <MarqueeSection 
+            title="TOOLS & PLATFORMS" 
+            images={toolsImages} 
+            duplicatedImages={duplicatedTools} 
           />
         </div>
-      </div> */}
-
-
-      {/* =-----------------------------------FRONTEND ------------------------------ */}
-      <p className="ml-5  md:ml-52 font-Poppins font-bold mt-10 text-xl text-white  ">
-        FRONTEND
-      </p>
-      <div className=" overflow-hidden relative flex w-2/3 mt-4 md:ml-56 ml-5  text-black">
-        <motion.div
-          ref={marqueeRef}
-          className="flex whitespace-nowrap py-5 px-7"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        >
-          {/* Image Group */}
-          <div className="flex items-center">
-            {frontendImages.map((image) => (
-             <motion.img
-             src={image.src}
-             alt={image.alt}
-             className={image.className}
-             whileHover={{ scale: 1.1 }}
-             animate={{ y: [0, -5, 0] }} // Moves up and down
-             transition={{ 
-               duration: 1.5, 
-               repeat: Infinity, 
-               ease: "easeInOut" 
-             }}
-           />
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      {/* =-----------------------------------BACKEND ------------------------------ */}
-      <p className="md:ml-52 ml-5 font-Poppins font-bold mt-5 text-xl text-white">
-        BACKEND
-      </p>
-      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-5 text-black">
-        <motion.div
-          ref={marqueeRef}
-          className="flex whitespace-nowrap py-5 px-7"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        >
-          {/* Image Group */}
-          <div className="flex  ">
-            {backendImages.map((image) => (
-              <motion.img
-              src={image.src}
-              alt={image.alt}
-              className={image.className}
-              whileHover={{ scale: 1.1 }}
-              animate={{ y: [0, -5, 0] }} // Moves up and down
-              transition={{ 
-                duration: 1.5, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            />
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      {/* ----------------------------------------TOOLS SECTIONS------------------------ */}
-      
-      <p className="md:ml-52 ml-5 font-Poppins font-bold mt-4 text-xl text-white">
-        TOOLS & PACKAGES
-      </p>
-      <div className="overflow-hidden relative flex w-1/2 mt-4 md:ml-56 ml-5   text-black">
-        <motion.div
-          ref={marqueeRef}
-          className="flex whitespace-nowrap py-3 px-7"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        >
-          {/* Image Group */}
-          {toolsImages.map((image) => (
-            <motion.img
-            src={image.src}
-            alt={image.alt}
-            className={image.className}
-            whileHover={{ scale: 1.1 }}
-            animate={{ y: [0, -5, 0] }} // Moves up and down
-            transition={{ 
-              duration: 1.5, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
-            }}
-          />
-          ))}
-        </motion.div>
       </div>
     </div>
   );
