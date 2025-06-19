@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from './utils/store';
 import Contact from './components/Contact';
 import Project from './components/Project';
-
+import Blogs from './components/Blogs';
 function App() {
   return (
     <Provider store={store}>
@@ -48,6 +48,7 @@ function App() {
         <Body/>
         <About/>
         <Project/>
+        <Blogs/>
         <Contact/>
         {/* <Footer/> */}
       </div>
