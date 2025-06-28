@@ -238,11 +238,11 @@ const About = () => {
             images={backendImages}
             delay={0.4}
           />
-          <TechSection 
+          {/* <TechSection 
             title="TOOLS" 
             images={toolsImages}
             delay={0.6}
-          />
+          /> */}
         </div>
       </div>
     </div>
