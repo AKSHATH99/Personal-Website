@@ -142,8 +142,8 @@ const Body = () => {
               className="w-full md:w-[500px] mt-3 md:text-sm md:-ml-0 font-ubuntu"
               variants={itemVariants}
             >
-              I'm a full stack developer and have been building websites for almost 3 years while learning.
-              I'm currently working as{" "}
+              I'm a full stack developer and love building websites.
+              I worked as{" "}
               <motion.span 
                 className="text-themeViolet"
                 whileHover={{ 
@@ -153,7 +153,7 @@ const Body = () => {
               >
                 full stack intern
               </motion.span>{" "}
-              at a startup and have been actively working on{" "}
+              at a startup and had  been actively worked on{" "}
               <motion.span 
                 className="text-themeViolet"
                 whileHover={{ 
@@ -171,7 +171,10 @@ const Body = () => {
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
               >
-                mongodb
+                nestjs with mongodb
+              </motion.span>
+              <motion.span>{" "}
+                over there {" "}
               </motion.span>
             </motion.p>
 
@@ -198,49 +201,83 @@ const Body = () => {
             </motion.p>
 
             {/* Social Icons */}
-            <motion.div 
-              className="flex gap-3 mt-4 justify-center md:justify-start md:-ml-0 -ml-10"
-              variants={itemVariants}
-            >
-              <a
-                href="https://www.linkedin.com/in/akshath-p-519939287/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform hover:scale-125 transition-transform duration-200"
-              >
-                <img
-                  alt="linkedin-icon"
-                  className="h-5 w-5"
-                  src="/images/linkedin.svg"
-                />
-              </a>
+<motion.div
+  className="flex gap-3 mt-4 justify-center md:justify-start md:-ml-0 -ml-10"
+  variants={itemVariants}
+>
+  <a
+    href="/resume.pdf"  // replace with your actual resume file path
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-2 py-[3px] bg-white/10 backdrop-blur-xl rounded-lg 
+               shadow-2xl border border-white/20
+               hover:bg-white/20 hover:scale-105 
+               transition-all duration-300 hover:cursor-pointer
+               inline-flex items-center justify-center
+               h-full min-w-[100px]"
+    style={{ position: 'relative', zIndex: 10 }}
+    onClick={(e) => {
+      e.stopPropagation();
+      window.open('/resume.pdf', '_blank');
+    }}
+  >
+    <span>Resume</span>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/akshath-p-519939287/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+    style={{ zIndex: 10, position: 'relative' }}
+    onClick={(e) => {
+      e.stopPropagation();
+      window.open('https://www.linkedin.com/in/akshath-p-519939287/', '_blank');
+    }}
+  >
+    <img
+      alt="linkedin-icon"
+      className="h-5 w-5"
+      src="/images/linkedin.svg"
+    />
+  </a>
 
-              <a 
-                href="https://github.com/AKSHATH99" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform hover:scale-125 transition-transform duration-200"
-              >
-                <img
-                  alt="git-icon"
-                  className="h-5 w-5"
-                  src="/images/github.svg"
-                />
-              </a>
+  <a
+    href="https://github.com/AKSHATH99"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+    style={{ zIndex: 10, position: 'relative' }}
+    onClick={(e) => {
+      e.stopPropagation();
+      window.open('https://github.com/AKSHATH99', '_blank');
+    }}
+  >
+    <img
+      alt="git-icon"
+      className="h-5 w-5"
+      src="/images/github.svg"
+    />
+  </a>
 
-              <a 
-                href="https://twitter.com/AkshathP2" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform hover:scale-125 transition-transform duration-200"
-              >
-                <img
-                  alt="icon"
-                  className="h-5 w-5"
-                  src="/images/x.png"
-                />
-              </a>
-            </motion.div>
+  <a
+    href="https://twitter.com/AkshathP2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+    style={{ zIndex: 10, position: 'relative' }}
+    onClick={(e) => {
+      e.stopPropagation();
+      window.open('https://twitter.com/AkshathP2', '_blank');
+    }}
+  >
+    <img
+      alt="x-icon"
+      className="h-5 w-5"
+      src="/images/x.png"
+    />
+  </a>
+</motion.div>
+
           </motion.div>
         </div>
       </div>
