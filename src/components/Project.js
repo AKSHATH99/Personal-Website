@@ -7,13 +7,12 @@ const ProjectData = [
     Livelink: "https://live-coding-video-chat-platform.onrender.com/",
     Githublink: "https://github.com/AKSHATH99/live-coding-video-chat-platform",
     about:
-      "Built a live coding environment with real-time collaboration and code running capabilities using monaco editor and live webrtc P2P connection. External code  running service of Judge0 is integrated for code execution.",
+      "Built a live coding environment with real-time collaboration and code running capabilities using monaco editor and live webrtc P2P connection. External code  running service of Judge0 is integrated for code execution. Users can open local files and manage multiple files at same time and export them to local device",
     placeholderImage: "/images/live-coding.png",
     stack: [
+      "https://cdn.worldvectorlogo.com/logos/socket-io.svg",
       "/logo192.png",
       "/images/tailwind.png",
-      "/images/ts.svg",
-      "/images/gemini.svg",
     ],
   },
   {
@@ -21,13 +20,14 @@ const ProjectData = [
     Livelink: "https://socketio-live-mcq.onrender.com/",
     Githublink: "https://github.com/AKSHATH99/socketio-live-mcq",
     about:
-      "Application allows user to format their code in their favourite code editor theme and download / Copy png file of the formatted code . Also intergrated Gemini API to explain the code they formatted ",
+      "Built a Socket-io based applications that lets you create mcqs in mintutes and host them in live test environment and get instant result and leaderboard capabilities. Intergrated Redis for live leaderboard feed in test host interface for better UX",
     placeholderImage: "/images/mcq.png",
     stack: [
+      "https://cdn.worldvectorlogo.com/logos/socket-io.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       "/logo192.png",
       "/images/tailwind.png",
-      "/images/ts.svg",
-      "/images/gemini.svg",
     ],
   },
   {
@@ -106,7 +106,7 @@ const Project = () => {
   };
 
   return (
-    <div id="project" className="lg:ml-[180px] text-white px-4 sm:px-6 lg:px-8 -mt-6 lg:-mt-10">
+    <div id="project" className="lg:ml-[180px] text-white px-4 sm:px-6 lg:px-8 mt-10">
       {/* Header Section */}
       <motion.div
         ref={headerRef}
@@ -116,7 +116,7 @@ const Project = () => {
         className="max-w-4xl"
       >
         <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mt-12 lg:mt-20 pt-4 lg:pt-7">
-          Things I've Built.
+          Projects I've Built.
         </h1>
         <div className="w-20 sm:w-24 lg:w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 mb-4"></div>
         <p className="mt-4 lg:mt-5 text-sm lg:text-base text-gray-300 max-w-2xl">
@@ -154,7 +154,7 @@ const Project = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            whileHover={{ 
+            whileHover={{
               scale: window.innerWidth >= 768 ? 1.03 : 1,
               y: window.innerWidth >= 768 ? -8 : 0
             }}
@@ -171,7 +171,7 @@ const Project = () => {
                 whileHover={{ scale: window.innerWidth >= 768 ? 1.1 : 1 }}
                 transition={{ duration: 0.5 }}
               />
-              
+
               {/* Gradient overlay - hidden on mobile for performance */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block" />
 
@@ -210,7 +210,7 @@ const Project = () => {
               <motion.h3
                 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300 line-clamp-1"
                 whileHover={{ x: window.innerWidth >= 768 ? 5 : 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 1.2 }}
               >
                 {data.title}
               </motion.h3>
@@ -227,7 +227,7 @@ const Project = () => {
                   <motion.div
                     key={techIndex}
                     className="relative group/tech bg-gray-800/60 rounded-full p-1 sm:p-1.5 border border-gray-600/30 hover:border-blue-400/50 transition-all duration-300"
-                    whileHover={{ 
+                    whileHover={{
                       scale: window.innerWidth >= 768 ? 1.15 : 1.05,
                       y: window.innerWidth >= 768 ? -2 : 0
                     }}
