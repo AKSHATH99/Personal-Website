@@ -11,7 +11,6 @@ const Contact = () => {
 
   const sendEmail = () => {
     setLoader(true);
-    // Simulate email sending
     setTimeout(() => {
       setMailStatus(true);
       setLoader(false);
@@ -25,27 +24,28 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="text-white md:pl-[170px] p-5 pb-8 mt-28 rounded-t-[50px] border-t-4 border-purple-500/30 shadow-2xl relative overflow-hidden"
+      className="text-white md:pl-[170px] p-5 pb-8 mt-28 rounded-t-[50px] border-t-4 border-violet-400/30 shadow-2xl relative overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom right, #000000, #000000, #1a1a1a, #2d033b)",
-        boxShadow: "0 -20px 50px rgba(147, 51, 234, 0.15), 0 -10px 25px rgba(147, 51, 234, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
+          "linear-gradient(to bottom right, #0a0a0a, #120018, #1a0b24, #2d033b)",
+        boxShadow:
+          "0 -20px 50px rgba(139, 92, 246, 0.12), 0 -10px 25px rgba(139, 92, 246, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
       }}
     >
       {/* Top glow accent */}
-      <div className="absolute -top-1 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60"></div>
+      <div className="absolute -top-1 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-violet-400 to-transparent opacity-60"></div>
       <div className="text-2xl mt-12 font-bold w-max relative">
         CONTACT ME
-        <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-transparent"></div>
+        <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-violet-400 to-transparent"></div>
       </div>
 
       <p className="mt-10 mb-1 text-xl font-poppins">
-        Got a <span className="font-bold text-purple-400">project</span> idea ? Need help building your{" "}
-        <span className="font-bold text-purple-400">product</span> ?
+        Got a <span className="font-bold text-violet-400">project</span> idea ? Need help building your{" "}
+        <span className="font-bold text-violet-400">product</span> ?
       </p>
       <p className="text-gray-400 mb-6">
         Feel free to hit me up by filling this form or{" "}
-        <span className="text-purple-400 font-bold">
+        <span className="text-violet-400 font-bold">
           <a href="mailto:akshathpkk@gmail.com">mail</a>
         </span>{" "}
         me directly
@@ -54,65 +54,92 @@ const Contact = () => {
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Contact Form */}
         <div className="flex-1">
-          <div className="border border-purple-500/20 p-6 rounded-lg shadow-xl bg-gray-900/50 backdrop-blur-sm relative overflow-hidden">
+          <div className="border border-violet-400/20 p-6 rounded-lg shadow-xl bg-gray-900/50 backdrop-blur-sm relative overflow-hidden">
             {/* Form inner glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-400/5 to-transparent pointer-events-none"></div>
             <div className="relative z-10">
-            {/* First Row - Name and Email */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              {/* First Row - Name and Email */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input
+                  className="text-sm rounded-md p-3 h-10 
+                             bg-white/10 backdrop-blur-md 
+                             border border-white/10 
+                             text-white placeholder-gray-400 
+                             focus:outline-none focus:ring-2 focus:ring-violet-400 
+                             shadow-inner"
+                  type="text"
+                  placeholder="Full Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  className="text-sm rounded-md p-3 h-10 
+                             bg-white/10 backdrop-blur-md 
+                             border border-white/10 
+                             text-white placeholder-gray-400 
+                             focus:outline-none focus:ring-2 focus:ring-violet-400 
+                             shadow-inner"
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              {/* Second Row - Subject */}
               <input
-                className="text-sm rounded-md p-3 h-10 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                className="text-sm rounded-md p-3 h-10 w-full 
+                           bg-white/10 backdrop-blur-md 
+                           border border-white/10 
+                           text-white placeholder-gray-400 
+                           focus:outline-none focus:ring-2 focus:ring-violet-400 
+                           mb-4 shadow-inner"
                 type="text"
-                placeholder="Full Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                placeholder="Subject"
+                value={sub}
+                onChange={(e) => setSub(e.target.value)}
               />
-              <input
-                className="text-sm rounded-md p-3 h-10 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+
+              {/* Third Row - Message */}
+              <textarea
+                className="text-sm rounded-md p-3 w-full h-20 
+                           bg-white/10 backdrop-blur-md 
+                           border border-white/10 
+                           text-white placeholder-gray-400 
+                           focus:outline-none focus:ring-2 focus:ring-violet-400 
+                           mb-4 resize-none shadow-inner"
+                placeholder="Brief your project idea or service over here"
+                value={msg}
+                onChange={(e) => setMsg(e.target.value)}
               />
-            </div>
-            
-            {/* Second Row - Subject */}
-            <input
-              className="text-sm rounded-md p-3 h-10 w-full bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 mb-4"
-              type="text"
-              placeholder="Subject"
-              value={sub}
-              onChange={(e) => setSub(e.target.value)}
-            />
-            
-            {/* Third Row - Message */}
-            <textarea
-              className="text-sm rounded-md p-3 w-full h-16 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 mb-4 resize-none"
-              placeholder="Brief your project idea or service over here"
-              value={msg}
-              onChange={(e) => setMsg(e.target.value)}
-            />
-            
-            {mailStatus ? (
-              <p className="font-bold text-green-400 text-center py-3">
-                DM sent. Will be reaching out shortly :)
-              </p>
-            ) : (
-              <button
-                onClick={sendEmail}
-                type="submit"
-                className="text-white bg-purple-600 p-3 w-full rounded-lg hover:bg-purple-500 transition-colors duration-200 font-medium"
-              >
-                {loader ? (
-                  <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    <span className="ml-2">Sending...</span>
-                  </div>
-                ) : (
-                  "Send message"
-                )}
-              </button>
-            )}
+
+              {mailStatus ? (
+                <p className="font-bold text-green-400 text-center py-3">
+                  DM sent. Will be reaching out shortly :)
+                </p>
+              ) : (
+                <button
+                  onClick={sendEmail}
+                  type="submit"
+                  className="w-full p-3 rounded-lg 
+                             bg-white/10 backdrop-blur-md 
+                             border border-white/10 
+                             text-white font-medium
+                             hover:bg-violet-400/20 
+                             hover:border-violet-400 
+                             transition-colors duration-300 
+                             shadow-md"
+                >
+                  {loader ? (
+                    <div className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span className="ml-2">Sending...</span>
+                    </div>
+                  ) : (
+                    "Send message"
+                  )}
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -133,7 +160,7 @@ const Contact = () => {
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </motion.a>
-              
+
               <motion.a
                 href="https://twitter.com/AkshathP2"
                 target="_blank"
@@ -145,13 +172,13 @@ const Contact = () => {
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </motion.a>
-              
+
               <motion.a
                 href="https://peerlist.io/akshath00"
                 target="_blank"
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                className="p-2 rounded-full bg-purple-600 hover:bg-purple-500 transition-colors"
+                className="p-2 rounded-full bg-violet-400 hover:bg-violet-300 transition-colors"
               >
                 <img 
                   src="/images/peerlist.svg" 
@@ -159,7 +186,7 @@ const Contact = () => {
                   className="w-6 h-6" 
                 />
               </motion.a>
-              
+
               <motion.a
                 href="https://github.com/AKSHATH99"
                 target="_blank"
