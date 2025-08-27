@@ -106,7 +106,7 @@ const Project = () => {
   };
 
   return (
-    <div id="project" className="md:ml-[100px] text-white px-4 sm:px-6 lg:px-8">
+    <div id="project" className="md:ml-[200px] text-white px-4 sm:px-6 lg:px-8 -mt-10">
       {/* Header Section */}
       <motion.div
         ref={headerRef}
@@ -145,7 +145,7 @@ const Project = () => {
       {/* Projects Grid */}
       <motion.div
         ref={projectsRef}
-        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-8 max-w-7xl items-start"
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mr-36 sm:gap-6 md:gap-8 mt-8 max-w-7xl items-start"
         variants={containerVariants}
         initial="hidden"
         animate={isProjectsInView ? "visible" : "hidden"}
@@ -157,7 +157,7 @@ const Project = () => {
             whileHover={{ scale: 1.03, y: -8 }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="relative cursor-pointer bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-lg rounded-lg border border-gray-700/50 overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 w-full max-w-[350px] mx-auto group"
+            className="relative cursor-pointer bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-lg rounded-lg border border-gray-700/50 overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 w-full max-w-[340px] mx-auto group"
           >
             {/* Project Image */}
             <div className="relative overflow-hidden">
@@ -211,9 +211,11 @@ const Project = () => {
               </motion.h3>
 
               {/* Description (clamp disabled on hover) */}
-              <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-3 line-clamp-2 group-hover:line-clamp-none">
+              <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-3 
+               line-clamp-none sm:line-clamp-2 group-hover:line-clamp-none">
                 {data.about}
               </p>
+
 
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-1 mb-3">

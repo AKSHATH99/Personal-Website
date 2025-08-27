@@ -168,7 +168,7 @@ const About = () => {
       transition={{ duration: 0.6, delay }}
     >
       {/* Section header */}
-      <div className="flex items-center mb-8 ml-5 md:ml-52">
+      <div className="flex items-center mb-4 ml-5 md:ml-52">
         <motion.div 
           className="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-4"
           initial={{ height: 0 }}
@@ -201,7 +201,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen -mt-10 pt-36 relative"
+      className="min-h-screen -mt-20 pt-36 relative"
       style={{ scrollPadding: "200px" }}
     >
 
@@ -212,8 +212,8 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-5xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 text-white mb-6">
-            Stack I've Worked On  
+          <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 text-white mb-6">
+          Tech I Use...
           </h1>
           <motion.div 
             className="w-40 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ml-5 md:ml-52 mb-4"
@@ -222,12 +222,12 @@ const About = () => {
             transition={{ duration: 1, delay: 0.5 }}
           />
           <p className="text-gray-300 ml-5 md:ml-52 text-lg font-light">
-            Technologies and tools I use to build amazing experiences
+            Technologies and tools i have used so far in my projects.
           </p>
         </motion.div>
 
         {/* Sections */}
-        <div className="mt-20 space-y-12">
+        <div className="mt-14 space-y-12">
           <TechSection 
             title="FRONTEND" 
             images={frontendImages}
