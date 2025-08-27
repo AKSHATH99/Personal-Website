@@ -7,6 +7,7 @@ import store from './utils/store';
 import Contact from './components/Contact';
 import Project from './components/Project';
 import Blogs from './components/Blogs';
+import Experience from './components/Experience';
 function App() {
   return (
     <Provider store={store}>
@@ -47,6 +48,7 @@ function App() {
         <Header/>
         <Body/>
         <About/>
+        <Experience/>
         <Project/>
         <Blogs/>
         <Contact/>
