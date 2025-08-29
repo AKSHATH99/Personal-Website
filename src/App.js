@@ -30,7 +30,7 @@ function App() {
               key={i}
               className="absolute w-2 h-2 rounded-full animate-pulse
                          bg-blue-500/20 dark:bg-blue-500/20 
-                         bg-violet-400/20"
+                         "
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,

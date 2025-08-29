@@ -7,7 +7,7 @@ const BlogCard = ({ title, description, coverImage, blogUrl }) => {
       href={blogUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block max-w-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl
+      className="block max-w-sm rounded-2xl overflow-hidden shadow-lg 
                  bg-white/90 backdrop-blur-xl border border-gray-200/60
                  hover:bg-white hover:border-gray-300/70 hover:shadow-2xl
                  dark:bg-white/10 dark:backdrop-blur-xl dark:border-white/20
