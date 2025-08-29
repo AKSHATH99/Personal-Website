@@ -79,18 +79,40 @@ const Body = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="md:mb-0 text-white flex flex-col justify-center items-center">
+      <div className="md:mb-0 dark:text-white  flex flex-col justify-center items-center">
         <div className="md:flex md:justify-center md:items-center xl:mt-44 320:mt-10">
           {/* Image Section with Enhanced Animation */}
-          <motion.div 
+
+          <motion.div
             className="md:mr-10"
             variants={imageVariants}
           >
+            {/* Dark mode image */}
             <motion.img
               alt="gif"
-              className="w-72 h-44 md:w-96 md:h-72 m-5 320:h-44 320:w-44 md:m-0 mx-auto"
-              src="/images/heroimg.svg "
-              whileHover={{ 
+              className="hidden dark:block w-72 h-44 md:w-96 md:h-72 m-5 320:h-44 320:w-44 md:m-0 mx-auto"
+              src="/images/heroimg.svg"
+              whileHover={{
+                scale: 1.05,
+                rotate: 2,
+                transition: { duration: 0.3 }
+              }}
+              animate={{
+                y: [0, -10, 0],
+                transition: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
+            />
+
+            {/* Light mode image */}
+            <motion.img
+              alt="gif"
+              className="block dark:hidden w-72 h-44 md:w-96 md:h-72 m-5 320:h-44 320:w-44 md:m-0 mx-auto"
+              src="/images/hero-lightmode.svg"
+              whileHover={{
                 scale: 1.05,
                 rotate: 2,
                 transition: { duration: 0.3 }
@@ -107,18 +129,18 @@ const Body = () => {
           </motion.div>
 
           {/* Text Content Section */}
-          <motion.div 
+          <motion.div
             className="m-2 md:w-2/3 text-center md:text-left"
             variants={itemVariants}
           >
             {/* Main Heading */}
-            <motion.p 
+            <motion.p
               className="text-3xl md:text-4xl font-bold font-mono 320:text-2xl"
               variants={itemVariants}
             >
               Hi, I am{" "}
               <motion.span
-                whileHover={{ 
+                whileHover={{
                   scale: 1.1,
                   color: "#8B5CF6",
                   textShadow: "0 0 20px rgba(139, 92, 246, 0.5)"
@@ -131,22 +153,22 @@ const Body = () => {
             </motion.p>
 
             {/* Description Paragraphs */}
-            <motion.p 
+            <motion.p
               className="w-full md:w-[500px] mt-3 md:text-sm md:-ml-0 -ml-6 font-ubuntu"
               variants={itemVariants}
             >
               I built full-stack websites.
             </motion.p>
 
-            <motion.p 
+            <motion.p
               className="w-full md:w-[500px] mt-3 md:text-sm md:-ml-0 font-ubuntu"
               variants={itemVariants}
             >
               I'm a full stack developer and love building websites.
               I worked as{" "}
-              <motion.span 
+              <motion.span
                 className="text-themeViolet"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
@@ -154,9 +176,9 @@ const Body = () => {
                 full stack intern
               </motion.span>{" "}
               at a startup and had  been actively worked on{" "}
-              <motion.span 
+              <motion.span
                 className="text-themeViolet"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
@@ -164,9 +186,9 @@ const Body = () => {
                 nextjs
               </motion.span>{" "}
               and{" "}
-              <motion.span 
+              <motion.span
                 className="text-themeViolet"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
@@ -181,14 +203,14 @@ const Body = () => {
             <br />
 
             {/* Call to Action */}
-            <motion.p 
+            <motion.p
               className="italic md:w-96 w-3/4 md:ml-0 ml-9 -mt-3 md:font-xl"
               variants={itemVariants}
             >
               I am actively looking for freelance gigs, internships and full time roles. Feel free to{" "}
-              <motion.span 
+              <motion.span
                 className="text-themeViolet"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
@@ -201,82 +223,81 @@ const Body = () => {
             </motion.p>
 
             {/* Social Icons */}
-<motion.div
-  className="flex gap-3 mt-4 justify-center md:justify-start md:-ml-0 -ml-10"
-  variants={itemVariants}
->
-  <a
-    href="/resume.pdf"  // replace with your actual resume file path
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-2 py-[3px] bg-white/10 backdrop-blur-xl rounded-lg 
-               shadow-2xl border border-white/20
-               hover:bg-white/20 hover:scale-105 
-               transition-all duration-300 hover:cursor-pointer
-               inline-flex items-center justify-center
-               h-full min-w-[100px]"
-    style={{ position: 'relative', zIndex: 10 }}
-    onClick={(e) => {
-      e.stopPropagation();
-      window.open('/resume.pdf', '_blank');
-    }}
-  >
-    <span>Resume</span>
-  </a>
-  <a
-    href="https://www.linkedin.com/in/akshath-p-519939287/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
-    style={{ zIndex: 10, position: 'relative' }}
-    onClick={(e) => {
-      e.stopPropagation();
-      window.open('https://www.linkedin.com/in/akshath-p-519939287/', '_blank');
-    }}
-  >
-    <img
-      alt="linkedin-icon"
-      className="h-5 w-5"
-      src="/images/linkedin.svg"
-    />
-  </a>
+            <motion.div
+              className="flex gap-3 mt-4 justify-center md:justify-start md:-ml-0 -ml-10"
+              variants={itemVariants}
+            >
+              <a
+                href="/resume.pdf"  // replace with your actual resume file path
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-2 py-[3px] bg-gray-100 dark:bg-white/10 backdrop-blur-xl rounded-lg 
+                           shadow-md border border-gray-300 dark:border-white/20
+                           hover:bg-gray-200 dark:hover:bg-white/20 hover:scale-105 
+                           transition-all duration-300 text-gray-800 dark:text-gray-100
+                           inline-flex items-center justify-center min-w-[100px]  "
+                style={{ position: 'relative', zIndex: 10 }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('/resume.pdf', '_blank');
+                }}
+              >
+                <span>Resume</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/akshath-p-519939287/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+                style={{ zIndex: 10, position: 'relative' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://www.linkedin.com/in/akshath-p-519939287/', '_blank');
+                }}
+              >
+                <img
+                  alt="linkedin-icon"
+                  className="h-5 w-5"
+                  src="/images/linkedin.svg"
+                />
+              </a>
 
-  <a
-    href="https://github.com/AKSHATH99"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
-    style={{ zIndex: 10, position: 'relative' }}
-    onClick={(e) => {
-      e.stopPropagation();
-      window.open('https://github.com/AKSHATH99', '_blank');
-    }}
-  >
-    <img
-      alt="git-icon"
-      className="h-5 w-5"
-      src="/images/github.svg"
-    />
-  </a>
+              <a
+                href="https://github.com/AKSHATH99"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+                style={{ zIndex: 10, position: 'relative' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://github.com/AKSHATH99', '_blank');
+                }}
+              >
+                <img
+                  alt="git-icon"
+                  className="h-5 w-5"
+                  src="/images/github.svg"
+                />
+              </a>
 
-  <a
-    href="https://twitter.com/AkshathP2"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
-    style={{ zIndex: 10, position: 'relative' }}
-    onClick={(e) => {
-      e.stopPropagation();
-      window.open('https://twitter.com/AkshathP2', '_blank');
-    }}
-  >
-    <img
-      alt="x-icon"
-      className="h-5 w-5"
-      src="/images/x.png"
-    />
-  </a>
-</motion.div>
+              <a
+                href="https://twitter.com/AkshathP2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform hover:scale-125 transition-transform duration-200 inline-flex items-center justify-center"
+                style={{ zIndex: 10, position: 'relative' }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open('https://twitter.com/AkshathP2', '_blank');
+                }}
+              >
+                <img
+                  alt="x-icon"
+                  className="h-5 w-5"
+                  src="/images/x.png"
+                />
+              </a>
+            </motion.div>
 
           </motion.div>
         </div>

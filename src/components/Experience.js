@@ -28,7 +28,7 @@ const Experience = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text dark:text-transparent  mb-4">
               Experience
             </h2>
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-violet-500 to-violet-400 rounded-full"></div>
@@ -69,13 +69,13 @@ const Experience = () => {
                   {/* Role and Company */}
                   <div className="space-y-1">
                     <motion.h3
-                      className="text-lg sm:text-xl font-bold text-white"
+                      className="text-lg sm:text-xl font-bold dark:text-white"
                       whileHover={{ x: window.innerWidth >= 768 ? 5 : 0 }}
                     >
                       {exp.role}
                     </motion.h3>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                      <span className="text-gray-300 font-medium text-sm sm:text-base">
+                      <span className="dark:text-gray-300 text-gray-400 font-medium text-sm sm:text-base">
                         {exp.company}
                       </span>
                       <span className="hidden sm:block w-1.5 h-1.5 bg-white/40 rounded-full"></span>
@@ -92,7 +92,7 @@ const Experience = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+                    <p className="dark:text-gray-400 text-gray-500 leading-relaxed text-sm sm:text-base">
                       {exp.description}
                     </p>
                   </motion.div>

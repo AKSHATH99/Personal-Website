@@ -106,7 +106,7 @@ const Project = () => {
   };
 
   return (
-    <div id="project" className="lg:ml-[180px] text-white px-4 sm:px-6 lg:px-8 mt-10">
+    <div id="project" className="lg:ml-[180px] text-gray-900 dark:text-white px-4 sm:px-6 lg:px-8 mt-10">
       {/* Header Section */}
       <motion.div
         ref={headerRef}
@@ -115,16 +115,16 @@ const Project = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-4xl"
       >
-        <h1 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mt-12 lg:mt-20 pt-4 lg:pt-7">
+        <h1 className="text-gray-900 dark:text-white text-xl sm:text-2xl lg:text-3xl font-bold mt-12 lg:mt-20 pt-4 lg:pt-7">
           Projects I've Built.
         </h1>
         <div className="w-20 sm:w-24 lg:w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 mb-4"></div>
-        <p className="mt-4 lg:mt-5 text-sm lg:text-base text-gray-300 max-w-2xl">
+        <p className="mt-4 lg:mt-5 text-sm lg:text-base text-gray-600 dark:text-gray-300 max-w-2xl">
           Here is a list of selected projects I have worked on so far. Check out my{" "}
           <motion.a
             href="https://github.com/AKSHATH99"
             target="_blank"
-            className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors duration-200"
+            className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 underline underline-offset-2 transition-colors duration-200"
             whileHover={{ scale: window.innerWidth >= 768 ? 1.05 : 1 }}
           >
             GitHub
@@ -133,7 +133,7 @@ const Project = () => {
           <motion.a
             href="https://peerlist.io/akshath00"
             target="_blank"
-            className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors duration-200"
+            className="text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 underline underline-offset-2 transition-colors duration-200"
             whileHover={{ scale: window.innerWidth >= 768 ? 1.05 : 1 }}
           >
             Peerlist
@@ -160,7 +160,7 @@ const Project = () => {
             }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="relative cursor-pointer bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-lg rounded-lg border border-gray-700/50 overflow-hidden shadow-xl hover:shadow-2xl md:hover:shadow-blue-500/10 transition-all duration-300 w-full max-w-[340px] mx-auto group"
+            className="relative cursor-pointer bg-white/80 border border-gray-200 dark:bg-gradient-to-br dark:from-gray-900/90 dark:to-gray-800/90 backdrop-blur-lg rounded-lg dark:border-gray-700/50 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl md:hover:shadow-blue-500/20 dark:md:hover:shadow-blue-500/10 transition-all duration-300 w-full max-w-[340px] mx-auto group"
           >
             {/* Project Image */}
             <div className="relative overflow-hidden">
@@ -173,7 +173,7 @@ const Project = () => {
               />
 
               {/* Gradient overlay - hidden on mobile for performance */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent dark:from-gray-900/80 dark:via-transparent dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block" />
 
               {/* Floating Action Buttons */}
               <div className="absolute top-2 sm:top-3 right-2 sm:right-3 flex space-x-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform md:translate-y-2 md:group-hover:translate-y-0">
@@ -193,7 +193,7 @@ const Project = () => {
                   href={data.Githublink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-700 hover:bg-gray-600 p-1 sm:p-1.5 rounded-full text-white transition-colors duration-200"
+                  className="bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 p-1 sm:p-1.5 rounded-full text-white transition-colors duration-200"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -205,10 +205,10 @@ const Project = () => {
             </div>
 
             {/* Project Content with Glassmorphism */}
-            <div className="p-3 sm:p-4 lg:p-5 bg-white/5 backdrop-blur-md border-t border-white/10 rounded-b-lg">
+            <div className="p-3 sm:p-4 lg:p-5 bg-gray-50/60 border-t border-gray-200/50 dark:bg-white/5 dark:backdrop-blur-md dark:border-t dark:border-white/10 rounded-b-lg">
               {/* Title */}
               <motion.h3
-                className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300 line-clamp-1"
+                className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-300 line-clamp-1"
                 whileHover={{ x: window.innerWidth >= 768 ? 5 : 0 }}
                 transition={{ duration: 1.2 }}
               >
@@ -216,7 +216,7 @@ const Project = () => {
               </motion.h3>
 
               {/* Description - Always show full text on mobile, truncate on larger screens */}
-              <p className="text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed mb-3 
+              <p className="text-gray-700 dark:text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed mb-3 
                  md:line-clamp-2 md:group-hover:line-clamp-none">
                 {data.about}
               </p>
@@ -226,7 +226,7 @@ const Project = () => {
                 {data.stack.filter(Boolean).map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
-                    className="relative group/tech bg-gray-800/60 rounded-full p-1 sm:p-1.5 border border-gray-600/30 hover:border-blue-400/50 transition-all duration-300"
+                    className="relative group/tech bg-gray-100 border border-gray-300/50 hover:border-blue-400/50 dark:bg-gray-800/60 rounded-full p-1 sm:p-1.5 dark:border-gray-600/30 dark:hover:border-blue-400/50 transition-all duration-300"
                     whileHover={{
                       scale: window.innerWidth >= 768 ? 1.15 : 1.05,
                       y: window.innerWidth >= 768 ? -2 : 0

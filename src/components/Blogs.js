@@ -8,7 +8,7 @@ const Blogs = () => {
     
     const isHeaderInView = useInView(headerRef, { once: true, threshold: 0.3 });
     const isBlogsInView = useInView(blogsRef, { once: true, threshold: 0.1 });
-
+    
     // Blog data array
     const blogs = [
         {
@@ -20,7 +20,7 @@ const Blogs = () => {
         },
        
     ];
-
+    
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -32,7 +32,7 @@ const Blogs = () => {
             }
         }
     };
-
+    
     const itemVariants = {
         hidden: { opacity: 0, y: 50, scale: 0.9 },
         visible: {
@@ -45,9 +45,9 @@ const Blogs = () => {
             }
         }
     };
-
+    
     return (
-        <div id="blogs" className="md:ml-[190px] text-white mt-10 pt-10">
+        <div id="blogs" className="md:ml-[190px] text-gray-900 dark:text-white mt-10 pt-10">
             {/* Header Section */}
             <motion.div
                 ref={headerRef}
@@ -56,16 +56,16 @@ const Blogs = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="ml-5"
             >
-                <h1 className="text-white font md:text-2xl text-3xl font-bold mb-2">
+                <h1 className="text-gray-900 dark:text-white font md:text-2xl text-3xl font-bold mb-2">
                     Blogs I've Written.
                 </h1>
                 <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 mb-4"></div>
-                <p className="mt-5 text-wrap md:w-max w-3/4 text-sm text-gray-300">
+                <p className="mt-5 text-wrap md:w-max w-3/4 text-sm text-gray-600 dark:text-gray-300">
                     Here are some of my latest thoughts and technical insights. I write about 
                     development, best practices, and interesting projects I've worked on.
                 </p>
             </motion.div>
-
+            
             {/* Blog Cards Grid */}
             <motion.div 
                 ref={blogsRef}

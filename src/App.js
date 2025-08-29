@@ -8,20 +8,29 @@ import Contact from './components/Contact';
 import Project from './components/Project';
 import Blogs from './components/Blogs';
 import Experience from './components/Experience';
+
 function App() {
   return (
     <Provider store={store}>
       <div className='min-h-screen w-screen overflow-x-hidden relative'>
         {/* Background layers for consistency */}
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black -z-10"></div>
-        <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] -z-10"></div>
-        
-        {/* Floating particles for the entire page */}
+
+        {/* 🌑 Dark Mode Background */}
+        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black dark:block hidden -z-10"></div>
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] dark:block hidden -z-10"></div>
+
+        {/* 🌕 Light Mode Background */}
+        <div className="fixed inset-0 bg-gradient-to-br from-[#F8F9FB] via-[#FFFFFF] to-[#F2F3F5] block dark:hidden -z-10"></div>
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(155,93,229,0.08),transparent_50%)] block dark:hidden -z-10"></div>
+
+        {/* Floating particles (adjust color for light mode) */}
         <div className="fixed inset-0 overflow-hidden -z-10">
           {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-blue-500/20 rounded-full animate-pulse"
+              className="absolute w-2 h-2 rounded-full animate-pulse
+                         bg-blue-500/20 dark:bg-blue-500/20 
+                         bg-violet-400/20"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -32,13 +41,25 @@ function App() {
           ))}
         </div>
 
-        {/* Additional subtle grid pattern */}
+        {/* Subtle grid (lighter for light mode, stronger for dark) */}
         <div 
-          className="fixed inset-0 opacity-[0.02] -z-10"
+          className="fixed inset-0 -z-10"
           style={{
+            opacity: '0.02',
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}
+        />
+        <div 
+          className="fixed inset-0 -z-10 dark:hidden"
+          style={{
+            opacity: '0.03',
+            backgroundImage: `
+              linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
           }}

@@ -127,13 +127,24 @@ const About = () => {
       className="relative group"
     >
       {/* Main card with glassmorphic design */}
-      <div className="relative p-3 rounded-xl bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-white/30">
+      <div className="relative p-3 rounded-xl 
+                    bg-gradient-to-br from-black/10 to-black/5 dark:from-white/20 dark:to-white/5 
+                    backdrop-blur-lg border border-black/10 dark:border-white/20 
+                    shadow-lg hover:shadow-2xl 
+                    transition-all duration-300 
+                    hover:border-black/20 dark:hover:border-white/30">
+
         {/* Animated background glow */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 rounded-xl 
+                      bg-gradient-to-br from-sky-400/20 to-indigo-400/20 dark:from-blue-500/20 dark:to-purple-500/20 
+                      opacity-0 group-hover:opacity-100 
+                      transition-opacity duration-300"></div>
 
         {/* Floating orb effect */}
         <motion.div
-          className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-0 group-hover:opacity-100"
+          className="absolute -top-1 -right-1 w-2 h-2 
+                   bg-gradient-to-br from-sky-400 to-indigo-400 dark:from-blue-400 dark:to-purple-500 
+                   rounded-full opacity-0 group-hover:opacity-100"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.5, 1, 0.5]
@@ -147,7 +158,11 @@ const About = () => {
 
         {/* Icon container */}
         <div className="relative z-10 flex flex-col items-center space-y-2">
-          <div className="w-10 h-10 flex items-center justify-center bg-white/95 rounded-lg shadow-inner group-hover:bg-white transition-colors duration-300">
+          <div className="w-10 h-10 flex items-center justify-center 
+                        dark:bg-white/95 
+                        rounded-lg shadow-inner 
+                        dark:group-hover:bg-white 
+                        transition-colors duration-300">
             <img
               src={image.src}
               alt={image.alt}
@@ -156,22 +171,31 @@ const About = () => {
           </div>
 
           {/* Tech name */}
-          <h4 className="text-white font-mono font-medium text-xs text-center group-hover:text-blue-200 transition-colors duration-300">
+          <h4 className="text-gray-800 dark:text-white font-mono font-medium text-xs text-center 
+                       group-hover:text-sky-500 dark:group-hover:text-blue-200 
+                       transition-colors duration-300">
             {image.name}
           </h4>
         </div>
 
         {/* Subtle border animation */}
-        <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-blue-500/50 to-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"
+        <div
+          className="absolute inset-0 rounded-xl border-2 border-transparent 
+                   bg-gradient-to-r from-sky-400/50 to-indigo-400/50 dark:from-blue-500/50 dark:to-purple-500/50 
+                   opacity-0 group-hover:opacity-100 
+                   transition-opacity duration-300 -z-10"
           style={{
-            background: 'linear-gradient(45deg, rgba(59, 130, 246, 0.5), rgba(147, 51, 234, 0.5))',
-            WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-            WebkitMaskComposite: 'exclude'
+            background:
+              "linear-gradient(45deg, rgba(56, 189, 248, 0.5), rgba(79, 70, 229, 0.5))",
+            WebkitMask:
+              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "exclude"
           }}
         />
       </div>
     </motion.div>
   );
+
 
   const TechSection = ({ title, images, delay = 0 }) => (
     <motion.div
@@ -188,7 +212,7 @@ const About = () => {
           animate={{ height: 32 }}
           transition={{ duration: 0.8, delay: delay + 0.2 }}
         />
-        <h3 className="font-bold text-2xl text-white font-mono tracking-wider">
+        <h3 className="font-bold text-2xl dark:text-white font-mono tracking-wider">
           {title}
         </h3>
         <motion.div
@@ -225,7 +249,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 text-white mb-6">
+          <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 dark:text-white mb-6">
             Tech I Use...
           </h1>
           <motion.div
@@ -234,7 +258,7 @@ const About = () => {
             animate={{ width: 160 }}
             transition={{ duration: 1, delay: 0.5 }}
           />
-          <p className="text-gray-300 ml-5 md:ml-52 text-lg font-light">
+          <p className="dark:text-gray-300 ml-5 md:ml-52 text-lg font-light">
             Technologies and tools i have used so far in my projects.
           </p>
         </motion.div>
