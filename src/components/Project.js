@@ -3,6 +3,21 @@ import { motion, useInView } from "framer-motion";
 
 const ProjectData = [
   {
+    title: "Web3 Document Verification System",
+    Livelink: "https://doc-verify-alpha.vercel.app/",
+    Githublink: "https://github.com/AKSHATH99/DocVerify",
+    about:
+      "Built a decentralized document verification system leveraging the Solana blockchain and IPFS for secure, tamper-proof document storage. Designed and deployed smart contracts using Solidity-compatible frameworks for Solana to manage document issuance and verification seamlessly. Integrated Phantom Wallet for user authentication and on-chain transaction signing, ensuring transparency and security throughout the verification process.",
+    placeholderImage: "/images/doc-verify.png",
+    stack: [
+      "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
+      "/logo192.png",                                         // React
+      "/images/tailwind.png",                                 // Tailwind CSS
+      "https://cdn.worldvectorlogo.com/logos/postgresql.svg", // PostgreSQL
+    ],
+  },
+
+  {
     title: "Live Coding Platform",
     Livelink: "https://live-coding-video-chat-platform.onrender.com/",
     Githublink: "https://github.com/AKSHATH99/live-coding-video-chat-platform",
