@@ -42,7 +42,7 @@ function App() {
         </div>
 
         {/* Subtle grid (lighter for light mode, stronger for dark) */}
-        <div 
+        <div
           className="fixed inset-0 -z-10"
           style={{
             opacity: '0.02',
@@ -53,7 +53,7 @@ function App() {
             backgroundSize: '50px 50px'
           }}
         />
-        <div 
+        <div
           className="fixed inset-0 -z-10 dark:hidden"
           style={{
             opacity: '0.03',
@@ -66,13 +66,13 @@ function App() {
         />
 
         {/* Main content */}
-        <Header/>
-        <Body/>
-        <About/>
-        <Experience/>
-        <Project/>
-        <Blogs/>
-        <Contact/>
+        <Header />
+        <Body />
+        <Experience />
+        <Project />
+        <About />
+        <Blogs />
+        <Contact />
         {/* <Footer/> */}
       </div>
     </Provider>

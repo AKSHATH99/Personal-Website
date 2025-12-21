@@ -206,15 +206,10 @@ const About = () => {
     >
       {/* Section header */}
       <div className="flex items-center mb-4 ml-5 md:ml-52">
-        <motion.div
-          className="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-4"
-          initial={{ height: 0 }}
-          animate={{ height: 32 }}
-          transition={{ duration: 0.8, delay: delay + 0.2 }}
-        />
-        <h3 className="font-bold text-2xl dark:text-white font-mono tracking-wider">
+       
+        {/* <h3 className="font-bold text-2xl dark:text-white font-mono tracking-wider">
           {title}
-        </h3>
+        </h3> */}
         <motion.div
           className="flex-1 h-px bg-gradient-to-r from-white/30 to-transparent ml-6"
           initial={{ scaleX: 0 }}
@@ -250,15 +245,15 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 dark:text-white mb-6">
-            Tech I Use...
+            Tech I Use
           </h1>
-          <motion.div
+          {/* <motion.div
             className="w-40 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ml-5 md:ml-52 mb-4"
             initial={{ width: 0 }}
             animate={{ width: 160 }}
             transition={{ duration: 1, delay: 0.5 }}
-          />
-          <p className="dark:text-gray-300 ml-5 md:ml-52 text-lg font-light">
+          /> */}
+          <p className="dark:text-gray-300 ml-5 md:ml-52 text-lg text-gray-400 font-light">
             Technologies and tools i have used so far in my projects.
           </p>
         </motion.div>

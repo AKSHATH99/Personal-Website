@@ -59,8 +59,7 @@ const Blogs = () => {
                 <h1 className="text-gray-900 dark:text-white font md:text-2xl text-3xl font-bold mb-2">
                     Blogs I've Written.
                 </h1>
-                <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 mb-4"></div>
-                <p className="mt-5 text-wrap md:w-max w-3/4 text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed  mb-20">
                     Here are some of my latest thoughts and technical insights. I write about 
                     development, best practices, and interesting projects I've worked on.
                 </p>
