@@ -164,8 +164,8 @@ const Body = () => {
               className="w-full md:w-[500px] mt-3 md:text-sm md:-ml-0 font-ubuntu"
               variants={itemVariants}
             >
-              I'm a full stack developer and love building websites.
-              I worked as{" "}
+              I'm a full stack developer and I love building websites.
+              I am working as{" "}
               <motion.span
                 className="text-themeViolet"
                 whileHover={{
@@ -173,31 +173,10 @@ const Body = () => {
                   textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
                 }}
               >
-                full stack intern
-              </motion.span>{" "}
-              at a startup and had  been actively worked on{" "}
-              <motion.span
-                className="text-themeViolet"
-                whileHover={{
-                  scale: 1.05,
-                  textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
-                }}
-              >
-                nextjs
-              </motion.span>{" "}
-              and{" "}
-              <motion.span
-                className="text-themeViolet"
-                whileHover={{
-                  scale: 1.05,
-                  textShadow: "0 0 10px rgba(139, 92, 246, 0.5)"
-                }}
-              >
-                nestjs with mongodb
+                a SDE-1. 
               </motion.span>
-              <motion.span>{" "}
-                over there {" "}
-              </motion.span>
+              {" "}
+                
             </motion.p>
 
             <br />

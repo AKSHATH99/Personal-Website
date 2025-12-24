@@ -199,7 +199,7 @@ const About = () => {
 
   const TechSection = ({ title, images, delay = 0 }) => (
     <motion.div
-      className="mb-16"
+      className="mb-3"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
@@ -233,7 +233,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="min-h-screen -mt-20 pt-36 relative"
+      className="min-h-screen  pt-36 relative"
       style={{ scrollPadding: "200px" }}
     >
 
@@ -244,7 +244,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 dark:text-white mb-6">
+          <h1 className="text-3xl md:text-4xl md:w-full w-3/4 text-wrap md:ml-52 ml-5 font-mono font-bold mt-10 dark:text-white mb-2">
             Tech I Use
           </h1>
           {/* <motion.div
@@ -259,7 +259,7 @@ const About = () => {
         </motion.div>
 
         {/* Sections */}
-        <div className="mt-14 space-y-">
+        <div className="mt-4 ">
           <TechSection
             title="FRONTEND"
             images={frontendImages}
