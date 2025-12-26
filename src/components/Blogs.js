@@ -47,7 +47,7 @@ const Blogs = () => {
     };
     
     return (
-        <div id="blogs" className="md:ml-[190px] text-gray-900 dark:text-white -mt-28 pt-1">
+        <div id="blogs" className="md:ml-[190px] text-gray-900 dark:text-white lg:-mt-28 mt-20 pt-1">
             {/* Header Section */}
             <motion.div
                 ref={headerRef}

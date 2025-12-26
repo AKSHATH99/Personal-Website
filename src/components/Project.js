@@ -154,7 +154,7 @@ const Project = () => {
       y: 0, 
       transition: { 
         duration: 0.5, 
-        ease: [0.22, 1, 0.36, 1] // Custom easing for smoother animation
+        ease: [0.22, 1, 0.36, 1]
       } 
     },
     exit: { 
@@ -188,20 +188,19 @@ const Project = () => {
           <motion.button
             key={f.value}
             onClick={() => setActiveCategory(f.value)}
-            className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 overflow-hidden
+            className={`relative px-5 py-2 rounded-xl text-sm font-medium transition-all duration-300 overflow-hidden backdrop-blur-md
               ${
                 activeCategory === f.value
-                  ? "text-white"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                  ? "text-gray-900 dark:text-white shadow-lg"
+                  : "bg-white/40 dark:bg-gray-800/40 text-gray-800 dark:text-gray-200 border border-gray-200/50 dark:border-gray-700/50"
               }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Animated background for active button */}
             {activeCategory === f.value && (
               <motion.div
                 layoutId="activeFilter"
-                className="absolute text-black inset-0 bg-gradient-to-r from-violet-500/30 to-purple-600/30 shadow-md border border-violet-400/30"
+                className="absolute inset-0 bg-gradient-to-r from-violet-500/30 to-purple-600/30 shadow-md border border-violet-400/30"
                 initial={false}
                 transition={{ 
                   type: "spring", 
@@ -212,13 +211,11 @@ const Project = () => {
               />
             )}
             
-            {/* Button text */}
             <span className="relative z-10">{f.label}</span>
             
-            {/* Hover effect for non-active buttons */}
             {activeCategory !== f.value && (
               <motion.div
-                className="absolute inset-0 bg-gray-300 dark:bg-gray-600"
+                className="absolute inset-0 bg-white/20 dark:bg-gray-700/60"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -243,150 +240,153 @@ const Project = () => {
               animate="visible"
               exit="exit"
               whileHover={{
-                scale: window.innerWidth >= 768 ? 1.05 : 1,
-                y: window.innerWidth >= 768 ? -10 : 0,
-                rotateY: window.innerWidth >= 768 ? 2 : 0,
+                scale: window.innerWidth >= 768 ? 1.02 : 1,
+                y: window.innerWidth >= 768 ? -8 : 0,
                 transition: { 
                   duration: 0.4, 
                   ease: [0.22, 1, 0.36, 1]
                 }
               }}
               whileTap={{ scale: 0.98 }}
-              className="relative cursor-pointer bg-white/80 border border-gray-200 dark:bg-gradient-to-br dark:from-gray-900/90 dark:to-gray-800/90 backdrop-blur-lg rounded-lg dark:border-gray-700/50 overflow-hidden shadow-lg hover:shadow-xl dark:shadow-xl dark:hover:shadow-2xl md:hover:shadow-blue-500/20 dark:md:hover:shadow-blue-500/10 transition-all duration-300 w-full mx-auto group"
+              className="relative cursor-pointer group"
               style={{ transformStyle: 'preserve-3d' }}
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden">
-                <motion.img
-                  src={data.placeholderImage}
-                  alt={data.title}
-                  className="w-full h-48 sm:h-52 lg:h-56 object-cover"
-                  initial={{ scale: 1 }}
-                  whileHover={{ 
-                    scale: window.innerWidth >= 768 ? 1.15 : 1,
-                    transition: { duration: 0.6, ease: "easeOut" }
-                  }}
-                />
+              {/* Glassmorphism Card Container */}
+              <div className="relative overflow-hidden rounded-2xl bg-white/70 dark:bg-gray-900/50 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 shadow-xl dark:shadow-2xl hover:shadow-2xl dark:hover:shadow-violet-500/20 transition-all duration-500">
+                
+                {/* Gradient overlay on card */}
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                
+                {/* Animated border glow */}
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-500 -z-10" />
 
-                {/* Gradient overlay */}
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent dark:from-gray-900/80 dark:via-transparent dark:to-transparent hidden md:block"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-
-                {/* Floating Action Buttons with stagger animation */}
-                <div className="absolute top-2 sm:top-3 right-2 sm:right-3 flex space-x-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
-                  <motion.a
-                    href={data.Livelink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-500 hover:bg-blue-600 p-1 sm:p-1.5 rounded-full text-white transition-colors duration-200"
-                    initial={{ y: -10, opacity: 0 }}
+                {/* Project Image */}
+                <div className="relative overflow-hidden rounded-t-2xl">
+                  <motion.img
+                    src={data.placeholderImage}
+                    alt={data.title}
+                    className="w-full h-48 sm:h-52 lg:h-56 object-cover"
+                    initial={{ scale: 1 }}
                     whileHover={{ 
-                      scale: 1.2,
-                      rotate: 5,
-                      transition: { duration: 0.2 }
+                      scale: window.innerWidth >= 768 ? 1.1 : 1,
+                      transition: { duration: 0.6, ease: "easeOut" }
                     }}
-                    whileTap={{ scale: 0.9 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.1 }}
-                  >
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </motion.a>
-                  <motion.a
-                    href={data.Githublink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-600 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 p-1 sm:p-1.5 rounded-full text-white transition-colors duration-200"
-                    initial={{ y: -10, opacity: 0 }}
-                    whileHover={{ 
-                      scale: 1.2,
-                      rotate: -5,
-                      transition: { duration: 0.2 }
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.15 }}
-                  >
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-                    </svg>
-                  </motion.a>
-                </div>
-              </div>
+                  />
 
-              {/* Project Content with Glassmorphism */}
-              <div className="p-3 sm:p-4 lg:p-5 bg-gray-50/60 border-t border-gray-200/50 dark:bg-white/5 dark:backdrop-blur-md dark:border-t dark:border-white/10 rounded-b-lg">
-                {/* Title with enhanced hover */}
-                <motion.h3
-                  className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-300 line-clamp-1"
-                  whileHover={{ 
-                    x: window.innerWidth >= 768 ? 8 : 0,
-                    transition: { duration: 0.3, ease: "easeOut" }
-                  }}
-                >
-                  {data.title}
-                </motion.h3>
+                  {/* Glass gradient overlay on image */}
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent dark:from-gray-900/90 dark:via-gray-900/20 dark:to-transparent hidden md:block"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
 
-                {/* Description */}
-                <p className="text-gray-700 dark:text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed mb-3 
-                   md:line-clamp-2 md:group-hover:line-clamp-none transition-all duration-300">
-                  {data.about}
-                </p>
-
-                {/* Tech Stack with enhanced stagger */}
-                <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-3">
-                  {data.stack.filter(Boolean).map((tech, techIndex) => (
-                    <motion.div
-                      key={techIndex}
-                      className="relative group/tech bg-gray-100 border border-gray-300/50 hover:border-blue-400/50 dark:bg-gray-800/60 rounded-full p-1 sm:p-1.5 dark:border-gray-600/30 dark:hover:border-blue-400/50 transition-all duration-300"
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ 
-                        delay: techIndex * 0.05,
-                        duration: 0.3,
-                        ease: "backOut"
+                  {/* Floating Action Buttons */}
+                  <div className="absolute top-3 right-3 flex space-x-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
+                    <motion.a
+                      href={data.Livelink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md hover:bg-violet-500 dark:hover:bg-violet-600 p-2 rounded-xl text-gray-700 dark:text-gray-200 hover:text-white transition-all duration-300 shadow-lg border border-gray-200/50 dark:border-gray-700/50"
+                      initial={{ y: -10, opacity: 0 }}
+                      whileHover={{ 
+                        scale: 1.2,
+                        rotate: 5,
+                        transition: { duration: 0.2 }
                       }}
-                      whileHover={{
-                        scale: window.innerWidth >= 768 ? 1.25 : 1.05,
-                        y: window.innerWidth >= 768 ? -4 : 0,
-                        rotate: window.innerWidth >= 768 ? [0, -10, 10, 0] : 0,
-                        transition: { duration: 0.4 }
-                      }}
+                      whileTap={{ scale: 0.9 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.1 }}
                     >
-                      <img
-                        src={tech}
-                        alt={`Tech ${techIndex + 1}`}
-                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full"
-                      />
-                      {/* Hover effect */}
-                      <motion.div 
-                        className="absolute inset-0 bg-blue-400/20 rounded-full hidden md:block"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileHover={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    </motion.div>
-                  ))}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </motion.a>
+                    <motion.a
+                      href={data.Githublink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md hover:bg-gray-700 dark:hover:bg-gray-600 p-2 rounded-xl text-gray-700 dark:text-gray-200 hover:text-white transition-all duration-300 shadow-lg border border-gray-200/50 dark:border-gray-700/50"
+                      initial={{ y: -10, opacity: 0 }}
+                      whileHover={{ 
+                        scale: 1.2,
+                        rotate: -5,
+                        transition: { duration: 0.2 }
+                      }}
+                      whileTap={{ scale: 0.9 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.15 }}
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                      </svg>
+                    </motion.a>
+                  </div>
                 </div>
-              </div>
 
-              {/* Hover Overlay with shimmer effect */}
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none rounded-lg hidden md:block"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-              
-              {/* Subtle glow effect on hover */}
-              <motion.div
-                className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10 hidden md:block"
-              />
+                {/* Glassmorphism Content Section */}
+                <div className="p-5 bg-white/50 dark:bg-gray-800/30 backdrop-blur-md border-t border-gray-200/50 dark:border-gray-700/50 rounded-b-2xl">
+                  
+                  {/* Title */}
+                  <motion.h3
+                    className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300 line-clamp-1"
+                    whileHover={{ 
+                      x: window.innerWidth >= 768 ? 8 : 0,
+                      transition: { duration: 0.3, ease: "easeOut" }
+                    }}
+                  >
+                    {data.title}
+                  </motion.h3>
+
+                  {/* Description */}
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 
+                     md:line-clamp-2 md:group-hover:line-clamp-none transition-all duration-300">
+                    {data.about}
+                  </p>
+
+                  {/* Tech Stack with Glassmorphism */}
+                  <div className="flex flex-wrap gap-2">
+                    {data.stack.filter(Boolean).map((tech, techIndex) => (
+                      <motion.div
+                        key={techIndex}
+                        className="relative group/tech bg-white/60 dark:bg-gray-700/40 backdrop-blur-md rounded-full p-2 border border-gray-200/50 dark:border-gray-600/50 hover:border-violet-400/50 dark:hover:border-violet-400/50 hover:shadow-lg transition-all duration-300"
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ 
+                          delay: techIndex * 0.05,
+                          duration: 0.3,
+                          ease: "backOut"
+                        }}
+                        whileHover={{
+                          scale: window.innerWidth >= 768 ? 1.25 : 1.05,
+                          y: window.innerWidth >= 768 ? -4 : 0,
+                          rotate: window.innerWidth >= 768 ? [0, -10, 10, 0] : 0,
+                          transition: { duration: 0.4 }
+                        }}
+                      >
+                        <img
+                          src={tech}
+                          alt={`Tech ${techIndex + 1}`}
+                          className="w-5 h-5 rounded-full"
+                        />
+                        
+                        {/* Hover glow effect */}
+                        <motion.div 
+                          className="absolute inset-0 bg-violet-400/20 rounded-full hidden md:block blur-sm"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileHover={{ opacity: 1, scale: 1.2 }}
+                          transition={{ duration: 0.2 }}
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Shimmer effect on hover */}
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none hidden md:block"
+                />
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>

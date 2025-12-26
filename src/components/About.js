@@ -126,8 +126,8 @@ const About = () => {
       }}
       className="relative group"
     >
-      {/* Main card with glassmorphic design */}
-      <div className="relative p-3 rounded-xl 
+      {/* Main card with glassmorphic design - reduced padding for mobile */}
+      <div className="relative p-2 md:p-3 rounded-lg md:rounded-xl 
                     bg-gradient-to-br from-black/10 to-black/5 dark:from-white/20 dark:to-white/5 
                     backdrop-blur-lg border border-black/10 dark:border-white/20 
                     shadow-lg hover:shadow-2xl 
@@ -135,14 +135,14 @@ const About = () => {
                     hover:border-black/20 dark:hover:border-white/30">
 
         {/* Animated background glow */}
-        <div className="absolute inset-0 rounded-xl 
+        <div className="absolute inset-0 rounded-lg md:rounded-xl 
                       bg-gradient-to-br from-sky-400/20 to-indigo-400/20 dark:from-blue-500/20 dark:to-purple-500/20 
                       opacity-0 group-hover:opacity-100 
                       transition-opacity duration-300"></div>
 
         {/* Floating orb effect */}
         <motion.div
-          className="absolute -top-1 -right-1 w-2 h-2 
+          className="absolute -top-1 -right-1 w-1.5 h-1.5 md:w-2 md:h-2
                    bg-gradient-to-br from-sky-400 to-indigo-400 dark:from-blue-400 dark:to-purple-500 
                    rounded-full opacity-0 group-hover:opacity-100"
           animate={{
@@ -156,22 +156,22 @@ const About = () => {
           }}
         />
 
-        {/* Icon container */}
-        <div className="relative z-10 flex flex-col items-center space-y-2">
-          <div className="w-10 h-10 flex items-center justify-center 
+        {/* Icon container - smaller on mobile */}
+        <div className="relative z-10 flex flex-col items-center space-y-1 md:space-y-2">
+          <div className="w-6 h-6 md:w-10 md:h-10 flex items-center justify-center 
                         dark:bg-white/95 
-                        rounded-lg shadow-inner 
+                        rounded-md md:rounded-lg shadow-inner 
                         dark:group-hover:bg-white 
                         transition-colors duration-300">
             <img
               src={image.src}
               alt={image.alt}
-              className="w-6 h-6 object-contain filter drop-shadow-sm"
+              className="w-4 h-4 md:w-6 md:h-6 object-contain filter drop-shadow-sm"
             />
           </div>
 
-          {/* Tech name */}
-          <h4 className="text-gray-800 dark:text-white font-mono font-medium text-xs text-center 
+          {/* Tech name - smaller text on mobile */}
+          <h4 className="text-gray-800 dark:text-white font-mono font-medium text-[0.65rem] md:text-xs text-center 
                        group-hover:text-sky-500 dark:group-hover:text-blue-200 
                        transition-colors duration-300">
             {image.name}
@@ -180,7 +180,7 @@ const About = () => {
 
         {/* Subtle border animation */}
         <div
-          className="absolute inset-0 rounded-xl border-2 border-transparent 
+          className="absolute inset-0 rounded-lg md:rounded-xl border-2 border-transparent 
                    bg-gradient-to-r from-sky-400/50 to-indigo-400/50 dark:from-blue-500/50 dark:to-purple-500/50 
                    opacity-0 group-hover:opacity-100 
                    transition-opacity duration-300 -z-10"
@@ -219,9 +219,9 @@ const About = () => {
         />
       </div>
 
-      {/* Grid layout */}
+      {/* Grid layout - adjusted gaps and columns for mobile */}
       <div className="ml-5 md:ml-52 mr-5 md:mr-52">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 md:gap-4">
           {images.map((image, index) => (
             <TechIcon key={index} image={image} index={index} delay={delay} />
           ))}
