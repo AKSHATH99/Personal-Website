@@ -96,7 +96,7 @@ const ProjectData = [
   {
     title: "Crypto Wallet   ",
     category: "landing",
-    Livelink: "https://price-wise-theta-ochre.vercel.app/",
+    Livelink: "https://estate-vault-secure.vercel.app/",
     about:
       "Landing page for a Crypto Wallet storage with  encrypted vault that stores seed phrases, NFT metadata, wills, and time-locked transfers.",
     placeholderImage: "/images/crypto-landing.png",
@@ -104,6 +104,19 @@ const ProjectData = [
       "/logo192.png",
       "/images/tailwind.png",
             "/images/motion.png",
+    ],
+  },
+  {
+    title : "Indian-Italian Restaurant Page",
+    category: "landing",
+    Livelink: "https://spice-sage-showcase.vercel.app/",
+    about:
+      "Landing page for a Indian-Italian Cusine restaurant that showcases their dishes and special items and their galleries and booking table features",
+    placeholderImage: "/images/restaurant-hero.png",
+    stack: [
+      "/logo192.png",
+      "/images/tailwind.png",
+      "/images/motion.png",
     ],
   }
 ];
